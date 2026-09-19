@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aluguer de Campos & Quadras – Decifer Sport Resort</title>
+  <meta name="description" content="Aluguer de campos de futebol, quadras de padel e piscina no Decifer Sport Resort.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .rental-card {
+      background: var(--bg-card);
+      border: var(--border-thin);
+      border-radius: var(--radius);
+      margin-bottom: var(--space-md);
+      overflow: hidden;
+    }
+
+    .rental-img {
+      height: 160px;
+      background: #d8d4cc;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .rental-body {
+      padding: var(--space-md);
+    }
+
+    .rental-body h2 {
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.45rem 0;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .price-row:last-of-type {
+      border-bottom: none;
+      margin-bottom: var(--space-sm);
+    }
+
+    .price-row span:last-child {
+      font-weight: var(--weight-medium);
+    }
+
+    .rental-note {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Decifer <span>Sport Resort</span></a>
+      <div class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="aulas.html">Aulas & Escolinhas</a></li>
+      <li><a href="aluguer.html" class="active">Aluguer de Campos</a></li>
+      <li><a href="alojamento.html">Alojamento</a></li>
+      <li><a href="eventos.html">Eventos</a></li>
+      <li><a href="contactos.html">Contactos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('images/soccer-pitch.jpg');"></div>
+    <div class="container page-hero-content">
+      <h1>Aluguer de Campos & Quadras</h1>
+      <p>Campos de relva sintética, padel e piscina.</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="container">
+      <!-- Campo Completo -->
+      <div class="rental-card">
+        <div class="rental-img" style="background-image: url('images/soccer-pitch.jpg');"></div>
+        <div class="rental-body">
+          <h2>Campo de Relva Sintética – Completo</h2>
+          <div class="price-row">
+            <span>Com Balneário · 1 Hora</span>
+            <span>100.000,00</span>
+          </div>
+          <div class="price-row">
+            <span>Sem Balneário · 1 Hora</span>
+            <span>50.000,00</span>
+          </div>
+          <a href="https://wa.me/244936724676?text=Olá,%20quero%20alugar%20o%20Campo%20Completo" class="btn btn-primary btn-full" target="_blank" rel="noopener">Consultar disponibilidade</a>
+        </div>
+      </div>
+
+      <!-- Meio Campo -->
+      <div class="rental-card">
+        <div class="rental-img" style="background-image: url('images/football-field.jpg');"></div>
+        <div class="rental-body">
+          <h2>Campo de Relva Sintética – Meio Campo</h2>
+          <div class="price-row">
+            <span>Com Balneário · 1 Hora</span>
+            <span>50.000,00</span>
+          </div>
+          <div class="price-row">
+            <span>Sem Balneário · 1 Hora</span>
+            <span>25.000,00</span>
+          </div>
+          <a href="https://wa.me/244936724676?text=Olá,%20quero%20alugar%20Meio%20Campo" class="btn btn-primary btn-full" target="_blank" rel="noopener">Consultar disponibilidade</a>
+        </div>
+      </div>
+
+      <!-- Padel -->
+      <div class="rental-card">
+        <div class="rental-img" style="background-image: url('images/padel-1.jpg');"></div>
+        <div class="rental-body">
+          <h2>Quadra de Padel</h2>
+          <div class="price-row">
+            <span>1 Hora</span>
+            <span>15.000,00</span>
+          </div>
+          <div class="price-row">
+            <span>1h30</span>
+            <span>22.500,00</span>
+          </div>
+          <a href="https://wa.me/244936724676?text=Olá,%20quero%20alugar%20Quadra%20de%20Padel" class="btn btn-primary btn-full" target="_blank" rel="noopener">Consultar disponibilidade</a>
+        </div>
+      </div>
+
+      <!-- Piscina -->
+      <div class="rental-card">
+        <div class="rental-img" style="background-image: url('images/pool-clean2.jpg');"></div>
+        <div class="rental-body">
+          <h2>Piscina</h2>
+          <p class="rental-note">Horário: 8h às 17h</p>
+          <div class="price-row">
+            <span>0 aos 2 anos</span>
+            <span>Grátis</span>
+          </div>
+          <div class="price-row">
+            <span>3 aos 10 anos</span>
+            <span>5.000,00</span>
+          </div>
+          <div class="price-row">
+            <span>11 anos à idade adulta</span>
+            <span>10.000,00</span>
+          </div>
+          <div class="price-row">
+            <span>Feriados e Fins de Semana</span>
+            <span>10.000,00</span>
+          </div>
+          <a href="https://wa.me/244936724676?text=Olá,%20quero%20informação%20sobre%20a%20Piscina" class="btn btn-primary btn-full" target="_blank" rel="noopener">Mais informações</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">Decifer Sport Resort</div>
+      <p class="footer-info">936 724 676 · reservas@decifersportresort.co.ao</p>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="aulas.html">Aulas</a>
+        <a href="alojamento.html">Alojamento</a>
+        <a href="eventos.html">Eventos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
