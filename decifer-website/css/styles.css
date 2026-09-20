@@ -168,12 +168,14 @@ p {
 
 .header-inner {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   height: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1.5rem;
+  direction: ltr;
 }
 
 .logo {
@@ -305,25 +307,29 @@ p {
   transform: translateY(-7.5px) rotate(-45deg);
 }
 
-/* Mobile Menu */
+/* Mobile Menu — slides in from the right (same side as hamburger) */
 .nav-mobile {
   position: fixed;
   top: 0;
+  left: auto;
   right: 0;
   width: min(100%, 360px);
   height: 100vh;
+  height: 100dvh;
   background: var(--color-white);
   border-left: var(--line) solid var(--color-border);
-  transform: translateX(100%);
+  border-right: none;
+  transform: translate3d(100%, 0, 0);
   transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   z-index: 999;
   padding: calc(var(--header-height) + 2rem) 2rem 2rem;
   display: flex;
   flex-direction: column;
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.06);
 }
 
 .nav-mobile.open {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .nav-mobile ul {
@@ -1236,6 +1242,12 @@ a.feature-item:hover {
   padding-top: calc(var(--header-height) + 5rem);
   padding-bottom: 3.5rem;
   color: #fff;
+  text-align: center;
+}
+
+.page-hero--media .container p {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page-hero--media .section-subtitle {
