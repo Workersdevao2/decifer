@@ -122,4 +122,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+
+
+  // Homepage hero dual-image slideshow
+  const heroSlides = document.querySelectorAll(".hero-media .hero-slide");
+  if (heroSlides.length > 1) {
+    let heroIndex = 0;
+    const HERO_INTERVAL = 10000; // 10s per image (includes crossfade)
+    setInterval(() => {
+      heroSlides[heroIndex].classList.remove("is-active");
+      // restart zoom on next slide by reflow
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      const next = heroSlides[heroIndex];
+      next.style.animation = "none";
+      void next.offsetWidth;
+      next.style.animation = "";
+      next.classList.add("is-active");
+    }, HERO_INTERVAL);
+  }
+
 });
