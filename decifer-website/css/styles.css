@@ -982,6 +982,54 @@ a.feature-item:hover {
   font-size: 1.05rem;
   font-weight: 300;
 }
+.page-hero--media {
+  position: relative;
+  padding: 0;
+  border-bottom: none;
+  min-height: 52vh;
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--color-dark);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.page-hero--media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 18, 18, 0.88) 0%,
+    rgba(10, 18, 18, 0.45) 50%,
+    rgba(10, 18, 18, 0.25) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.page-hero--media .container {
+  position: relative;
+  z-index: 1;
+  padding-top: calc(var(--header-height) + 5rem);
+  padding-bottom: 3.5rem;
+  color: #fff;
+}
+
+.page-hero--media .section-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.page-hero--media h1 {
+  color: #fff;
+}
+
+.page-hero--media p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 36ch;
+}
+
 
 /* ========== UTILITY ========== */
 .mt-1 { margin-top: 0.5rem; }
