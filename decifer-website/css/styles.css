@@ -857,20 +857,69 @@ a.feature-item:hover {
   gap: 3rem;
 }
 
-.contact-info h3 {
+.contact-info h3,
+.contact-form-wrap h3 {
   margin-bottom: 1rem;
 }
 
-.contact-info p,
-.contact-info a {
+.contact-intro {
   font-size: 0.95rem;
   color: var(--color-text-muted);
-  margin-bottom: 0.5rem;
-  display: block;
+  margin-bottom: 1.75rem;
 }
 
-.contact-info a:hover {
+.contact-item {
+  margin-bottom: 1.35rem;
+  padding-bottom: 1.35rem;
+  border-bottom: var(--line) solid var(--color-border);
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.contact-value {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+a.contact-value:hover {
   color: var(--color-accent-dark);
+}
+
+.contact-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+
+.contact-socials a {
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.contact-socials a:hover {
+  color: var(--color-accent-dark);
+}
+
+.form-note {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin-top: 1rem;
 }
 
 .form-group {
