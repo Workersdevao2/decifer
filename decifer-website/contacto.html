@@ -55,7 +55,7 @@
     </ul>
   </nav>
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--media" style="background-image: url('images/contacto-hero.jpg');">
     <div class="container">
       <p class="uppercase section-subtitle">Fale connosco</p>
       <h1>Contacto</h1>
@@ -68,31 +68,39 @@
       <div class="contact-grid">
         <div class="contact-info">
           <h3>Informações</h3>
-          <p style="margin-bottom: 1.5rem;">A forma mais rápida de nos contactar é através do WhatsApp.</p>
-          
-          <p class="uppercase" style="font-size: 0.7rem; margin-bottom: 0.35rem; color: var(--color-text-light);">Telefone / WhatsApp</p>
-          <a href="tel:+244936724676" style="margin-bottom: 1.25rem;">+244 936 724 676</a>
-          
-          <p class="uppercase" style="font-size: 0.7rem; margin-bottom: 0.35rem; color: var(--color-text-light);">Padel (reservas)</p>
-          <a href="tel:+244929797204" style="margin-bottom: 1.25rem;">+244 929 797 204</a>
-          
-          <p class="uppercase" style="font-size: 0.7rem; margin-bottom: 0.35rem; color: var(--color-text-light);">Email</p>
-          <a href="mailto:reservas@decifersportresort.co.ao" style="margin-bottom: 1.25rem;">reservas@decifersportresort.co.ao</a>
-          
-          <p class="uppercase" style="font-size: 0.7rem; margin-bottom: 0.35rem; color: var(--color-text-light);">Morada</p>
-          <p style="margin-bottom: 1.25rem;">Rua do Centro de Distribuição da EPAL<br>Benfica II, Lar do Patriota</p>
+          <p class="contact-intro">A forma mais rápida de nos contactar é através do WhatsApp.</p>
 
-          <p class="uppercase" style="font-size: 0.7rem; margin: 1.5rem 0 0.5rem; color: var(--color-text-light);">Redes sociais</p>
-          <a href="https://www.instagram.com/decifersportresort/" target="_blank" rel="noopener" style="margin-bottom: 0.5rem;">Instagram</a>
-          <a href="https://www.facebook.com/decifersportresortcoque" target="_blank" rel="noopener" style="margin-bottom: 1.25rem;">Facebook</a>
+          <div class="contact-item">
+            <span class="contact-label">Telefone / WhatsApp</span>
+            <a href="tel:+244936724676" class="contact-value">+244 936 724 676</a>
+          </div>
 
-          <div style="margin-top: 1.5rem;">
-            <a href="https://wa.me/244936724676" class="btn btn-accent" target="_blank" rel="noopener">Abrir WhatsApp</a>
+          <div class="contact-item">
+            <span class="contact-label">Padel (reservas)</span>
+            <a href="tel:+244929797204" class="contact-value">+244 929 797 204</a>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a href="mailto:reservas@decifersportresort.co.ao" class="contact-value">reservas@decifersportresort.co.ao</a>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Morada</span>
+            <p class="contact-value">Rua do Centro de Distribuição da EPAL<br>Benfica II, Lar do Patriota</p>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Redes sociais</span>
+            <div class="contact-socials">
+              <a href="https://www.instagram.com/decifersportresort/" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.facebook.com/decifersportresortcoque" target="_blank" rel="noopener">Facebook</a>
+            </div>
           </div>
         </div>
 
-        <div>
-          <h3 style="margin-bottom: 1.5rem;">Enviar mensagem</h3>
+        <div class="contact-form-wrap">
+          <h3>Enviar mensagem</h3>
           <form class="form-whatsapp" data-form-type="Contacto geral">
             <div class="form-group">
               <label for="name">Nome</label>
@@ -119,18 +127,19 @@
             </div>
             <button type="submit" class="btn">Enviar via WhatsApp</button>
           </form>
-          <p style="font-size: 0.8rem; color: var(--color-text-light); margin-top: 1rem;">Preferimos o WhatsApp para respostas mais rápidas.</p>
+          <p class="form-note">Preferimos o WhatsApp para respostas mais rápidas.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background: var(--color-bg-alt); padding: 3rem 0;">
-    <div class="container text-center">
-      <p class="uppercase section-subtitle">Localização</p>
-      <h2 class="section-title" style="margin-bottom: 0.75rem;">Visite-nos</h2>
-      <p style="margin: 0 auto;">Rua do Centro de Distribuição da EPAL, Benfica II, Lar do Patriota.</p>
-      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-light);">Contacte-nos para indicações detalhadas.</p>
+  <section class="cta-band" style="background-image: url('images/contacto-cta.jpg');">
+    <div class="cta-band-overlay"></div>
+    <div class="container text-center" style="position: relative; z-index: 1;">
+      <p class="uppercase" style="color: rgba(255,255,255,0.65); margin-bottom: 0.75rem; letter-spacing: 0.1em; font-size: 0.8rem;">Localização</p>
+      <h2 style="color: white; margin-bottom: 1rem;">Visite-nos</h2>
+      <p style="color: rgba(255,255,255,0.8); margin: 0 auto 0.5rem; max-width: 40ch;">Rua do Centro de Distribuição da EPAL, Benfica II, Lar do Patriota.</p>
+      <p style="color: rgba(255,255,255,0.6); margin: 0 auto; max-width: 36ch; font-size: 0.9rem;">Contacte-nos para indicações detalhadas.</p>
     </div>
   </section>
 
