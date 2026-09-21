@@ -141,7 +141,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }, HERO_INTERVAL);
   }
 
-  // Card image sliders (rooms, etc.)
+  // Card image sliders (rooms, overlay cards, etc.)
+  // Optional: data-autoplay="4000" for slow auto-advance (ms). Pauses on hover.
   document.querySelectorAll("[data-slider]").forEach((slider) => {
     const slides = Array.from(slider.querySelectorAll(".card-slider__slide"));
     if (slides.length <= 1) {
@@ -152,29 +153,75 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevBtn = slider.querySelector("[data-slider-prev]");
     const nextBtn = slider.querySelector("[data-slider-next]");
     const dotsWrap = slider.querySelector("[data-slider-dots]");
+    const autoplayMs = parseInt(slider.getAttribute("data-autoplay") || "0", 10);
     let index = 0;
+    let timer = null;
 
-    // Build dots
-    slides.forEach((_, i) => {
-      const dot = document.createElement("button");
-      dot.type = "button";
-      dot.className = "card-slider__dot" + (i === 0 ? " is-active" : "");
-      dot.setAttribute("aria-label", `Imagem ${i + 1}`);
-      dot.addEventListener("click", () => goTo(i));
-      dotsWrap.appendChild(dot);
-    });
-    const dots = Array.from(dotsWrap.querySelectorAll(".card-slider__dot"));
+    if (dotsWrap) {
+      slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "card-slider__dot" + (i === 0 ? " is-active" : "");
+        dot.setAttribute("aria-label", `Imagem ${i + 1}`);
+        dot.addEventListener("click", () => {
+          goTo(i);
+          restartAutoplay();
+        });
+        dotsWrap.appendChild(dot);
+      });
+    }
+    const dots = dotsWrap
+      ? Array.from(dotsWrap.querySelectorAll(".card-slider__dot"))
+      : [];
 
     function goTo(i) {
       slides[index].classList.remove("is-active");
-      dots[index].classList.remove("is-active");
+      if (dots[index]) dots[index].classList.remove("is-active");
       index = (i + slides.length) % slides.length;
       slides[index].classList.add("is-active");
-      dots[index].classList.add("is-active");
+      if (dots[index]) dots[index].classList.add("is-active");
     }
 
-    if (prevBtn) prevBtn.addEventListener("click", (e) => { e.preventDefault(); goTo(index - 1); });
-    if (nextBtn) nextBtn.addEventListener("click", (e) => { e.preventDefault(); goTo(index + 1); });
+    function startAutoplay() {
+      if (!autoplayMs || autoplayMs < 1500) return;
+      stopAutoplay();
+      timer = setInterval(() => goTo(index + 1), autoplayMs);
+    }
+
+    function stopAutoplay() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function restartAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        goTo(index - 1);
+        restartAutoplay();
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        goTo(index + 1);
+        restartAutoplay();
+      });
+    }
+
+    // Pause when user hovers / focuses the card
+    slider.addEventListener("mouseenter", stopAutoplay);
+    slider.addEventListener("mouseleave", startAutoplay);
+    slider.addEventListener("focusin", stopAutoplay);
+    slider.addEventListener("focusout", startAutoplay);
+
+    startAutoplay();
   });
 
 });
