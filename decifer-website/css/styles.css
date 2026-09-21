@@ -1441,7 +1441,19 @@ a.contact-value:hover {
 .mb-3 { margin-bottom: 1.5rem; }
 .mb-4 { margin-bottom: 2rem; }
 
-.text-center { text-align: center; }
+.text-center {
+  text-align: center;
+}
+
+.text-center > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center p {
+  max-width: 48ch;
+}
+
 .mx-auto { margin-left: auto; margin-right: auto; }
 
 .divider {
