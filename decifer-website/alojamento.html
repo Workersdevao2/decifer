@@ -25,6 +25,7 @@
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="desporto.html">Desporto</a></li>
+          <li><a href="aluguer.html">Aluguer</a></li>
           <li><a href="alojamento.html" class="active">Alojamento</a></li>
           <li><a href="eventos.html">Eventos</a></li>
           <li><a href="espacos.html">Espaços</a></li>
@@ -45,6 +46,7 @@
     <ul>
       <li><a href="index.html">Início</a></li>
       <li><a href="desporto.html">Desporto</a></li>
+      <li><a href="aluguer.html">Aluguer</a></li>
       <li><a href="alojamento.html" class="active">Alojamento</a></li>
       <li><a href="eventos.html">Eventos</a></li>
       <li><a href="espacos.html">Espaços</a></li>
@@ -53,7 +55,7 @@
     </ul>
   </nav>
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--media" style="background-image: url('images/alojamento-hero.jpg');">
     <div class="container">
       <p class="uppercase section-subtitle">Hospedagem</p>
       <h1>32 Suítes</h1>
@@ -63,64 +65,164 @@
 
   <section class="section">
     <div class="container">
-      <div class="cards-grid">
-        <article class="card">
-          <div class="card-image">
-            <img loading="lazy" decoding="async" src="images/feature-suites.jpg" alt="Suite Casal" width="800" height="500">
+      <div class="text-center mb-4">
+        <p class="uppercase section-subtitle">Tipos de quarto</p>
+        <h2 class="section-title">Escolha a sua estadia</h2>
+        <p style="margin: 0 auto; max-width: 42ch;">Pequeno-almoço, estacionamento e Wi-Fi incluídos em todas as unidades.</p>
+      </div>
+
+      <div class="class-list">
+
+        <!-- Suite Casal -->
+        <article class="class-card">
+          <div class="class-card__media">
+            <div class="card-slider" data-slider>
+              <div class="card-slider__track">
+                <div class="card-slider__slide is-active">
+                  <img loading="lazy" decoding="async" src="images/suite-casal-1.jpg" alt="Suite Casal" width="1200" height="675">
+                </div>
+                <!-- Add more slides: suite-casal-2.jpg, suite-casal-3.jpg -->
+              </div>
+              <div class="card-slider__nav">
+                <button type="button" class="card-slider__btn" data-slider-prev aria-label="Anterior">
+                  <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button type="button" class="card-slider__btn" data-slider-next aria-label="Seguinte">
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+              <div class="card-slider__dots" data-slider-dots></div>
+            </div>
           </div>
-          <div class="card-body">
-            <p class="card-meta">Suite</p>
-            <h3>Suite Casal</h3>
-            <p>Cama de casal, casa de banho privativa, ar condicionado e ambiente acolhedor.</p>
-            <ul style="margin: 0.75rem 0 1rem; font-size: 0.9rem; color: var(--color-text-muted); padding-left: 1.1rem;">
-              <li>Estacionamento</li>
-              <li>Pequeno-almoço incluído</li>
-              <li>Internet / Wi-Fi</li>
-              <li>Check-in 14:00 · Check-out 12:00</li>
-            </ul>
-            <p style="font-weight: 500; margin-bottom: 1rem;">80.000 Kz / noite</p>
-            <a href="#reservar">Reservar</a>
+          <div class="class-card__body">
+            <span class="class-card__label">Suite</span>
+            <h3 class="class-card__title">Suite Casal</h3>
+            <p class="class-card__meta">Cama de casal · Casa de banho privativa · Ar condicionado</p>
+            <div class="class-card__cols">
+              <div>
+                <p class="class-card__section-title">Preço</p>
+                <ul class="price-rows">
+                  <li><span class="price-label">Por noite</span><span class="price-value">80.000 Kz</span></li>
+                </ul>
+              </div>
+              <div>
+                <p class="class-card__section-title">Inclui</p>
+                <ul>
+                  <li>Estacionamento</li>
+                  <li>Pequeno-almoço</li>
+                  <li>Internet / Wi-Fi</li>
+                  <li>Check-in 14:00 · Check-out 12:00</li>
+                </ul>
+              </div>
+            </div>
+            <div class="class-card__action">
+              <a href="#reservar" class="btn btn-sm">Reservar</a>
+            </div>
           </div>
         </article>
 
-        <article class="card">
-          <div class="card-image">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80" alt="Quarto Duplo" width="800" height="500">
+        <!-- Quarto Duplo -->
+        <article class="class-card">
+          <div class="class-card__media">
+            <div class="card-slider" data-slider>
+              <div class="card-slider__track">
+                <div class="card-slider__slide is-active">
+                  <img loading="lazy" decoding="async" src="images/quarto-duplo-1.jpg" alt="Quarto Duplo" width="1200" height="675">
+                </div>
+                <!-- Add more slides: quarto-duplo-2.jpg, quarto-duplo-3.jpg -->
+              </div>
+              <div class="card-slider__nav">
+                <button type="button" class="card-slider__btn" data-slider-prev aria-label="Anterior">
+                  <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button type="button" class="card-slider__btn" data-slider-next aria-label="Seguinte">
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+              <div class="card-slider__dots" data-slider-dots></div>
+            </div>
           </div>
-          <div class="card-body">
-            <p class="card-meta">Quarto</p>
-            <h3>Quarto Duplo</h3>
-            <p>Duas camas individuais ou configuração equivalente. Ideal para amigos ou colegas de equipa.</p>
-            <ul style="margin: 0.75rem 0 1rem; font-size: 0.9rem; color: var(--color-text-muted); padding-left: 1.1rem;">
-              <li>Estacionamento</li>
-              <li>Pequeno-almoço incluído</li>
-              <li>Internet / Wi-Fi</li>
-              <li>Check-in 14:00 · Check-out 12:00</li>
-            </ul>
-            <p style="font-weight: 500; margin-bottom: 1rem;">90.000 Kz / noite</p>
-            <a href="#reservar">Reservar</a>
+          <div class="class-card__body">
+            <span class="class-card__label">Quarto</span>
+            <h3 class="class-card__title">Quarto Duplo</h3>
+            <p class="class-card__meta">Duas camas individuais · Ideal para amigos ou equipa</p>
+            <div class="class-card__cols">
+              <div>
+                <p class="class-card__section-title">Preço</p>
+                <ul class="price-rows">
+                  <li><span class="price-label">Por noite</span><span class="price-value">90.000 Kz</span></li>
+                </ul>
+              </div>
+              <div>
+                <p class="class-card__section-title">Inclui</p>
+                <ul>
+                  <li>Estacionamento</li>
+                  <li>Pequeno-almoço</li>
+                  <li>Internet / Wi-Fi</li>
+                  <li>Check-in 14:00 · Check-out 12:00</li>
+                </ul>
+              </div>
+            </div>
+            <div class="class-card__action">
+              <a href="#reservar" class="btn btn-sm">Reservar</a>
+            </div>
           </div>
         </article>
 
-        <article class="card">
-          <div class="card-image">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80" alt="Cama extra" width="800" height="500">
+        <!-- Cama Extra -->
+        <article class="class-card">
+          <div class="class-card__media">
+            <div class="card-slider" data-slider>
+              <div class="card-slider__track">
+                <div class="card-slider__slide is-active">
+                  <img loading="lazy" decoding="async" src="images/cama-extra-1.jpg" alt="Cama extra" width="1200" height="675">
+                </div>
+                <!-- Add more slides: cama-extra-2.jpg -->
+              </div>
+              <div class="card-slider__nav">
+                <button type="button" class="card-slider__btn" data-slider-prev aria-label="Anterior">
+                  <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button type="button" class="card-slider__btn" data-slider-next aria-label="Seguinte">
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+              <div class="card-slider__dots" data-slider-dots></div>
+            </div>
           </div>
-          <div class="card-body">
-            <p class="card-meta">Extra</p>
-            <h3>Cama Extra</h3>
-            <p>Disponível sob pedido para aumentar a capacidade do quarto ou suite.</p>
-            <p style="font-weight: 500; margin: 1rem 0;">40.000 Kz</p>
-            <a href="#reservar">Pedir info</a>
+          <div class="class-card__body">
+            <span class="class-card__label">Extra</span>
+            <h3 class="class-card__title">Cama Extra</h3>
+            <p class="class-card__meta">Sob pedido · Aumenta a capacidade do quarto ou suite</p>
+            <div class="class-card__cols">
+              <div>
+                <p class="class-card__section-title">Preço</p>
+                <ul class="price-rows">
+                  <li><span class="price-label">Por noite</span><span class="price-value">40.000 Kz</span></li>
+                </ul>
+              </div>
+              <div>
+                <p class="class-card__section-title">Notas</p>
+                <ul>
+                  <li>Disponível sob pedido</li>
+                  <li>Sujeito a disponibilidade</li>
+                  <li>Indique no formulário de reserva</li>
+                </ul>
+              </div>
+            </div>
+            <div class="class-card__action">
+              <a href="#reservar" class="btn btn-sm">Pedir info</a>
+            </div>
           </div>
         </article>
+
       </div>
     </div>
   </section>
 
   <section class="split">
     <div class="split-media">
-      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=80" alt="Detalhes do quarto" width="1200" height="800">
+      <img loading="lazy" decoding="async" src="images/alojamento-split.jpg" alt="Detalhes do quarto" width="1200" height="800">
     </div>
     <div class="split-content">
       <p class="uppercase section-subtitle">Conforto</p>
@@ -133,16 +235,17 @@
         <li style="margin-bottom: 0.5rem; padding-left: 1rem; border-left: 1.5px solid var(--color-accent);">Check-out até às 12:00</li>
         <li style="margin-bottom: 0.5rem; padding-left: 1rem; border-left: 1.5px solid var(--color-accent);">Acesso às instalações desportivas e de lazer</li>
       </ul>
-      <a href="#reservar">Consultar disponibilidade</a>
+      <a href="#reservar" class="btn btn-sm">Consultar disponibilidade</a>
     </div>
   </section>
 
-  <section class="section" style="background: var(--color-bg-alt);">
-    <div class="container text-center">
-      <p class="uppercase section-subtitle">Experiência completa</p>
-      <h2 class="section-title">Fique e aproveite tudo</h2>
-      <p style="margin: 0 auto 2rem;">Hóspedes do Decifer têm acesso a campos, quadras de padel, piscinas, esplanada e espaços de eventos durante a estadia.</p>
-      <a href="#reservar">Reservar agora</a>
+  <section class="cta-band" style="background-image: url('images/alojamento-cta.jpg');">
+    <div class="cta-band-overlay"></div>
+    <div class="container" style="position: relative; z-index: 1;">
+      <p class="uppercase" style="color: rgba(255,255,255,0.65); margin-bottom: 0.75rem; letter-spacing: 0.1em; font-size: 0.8rem;">Experiência completa</p>
+      <h2 style="color: #fff; margin-bottom: 1rem;">Fique e aproveite tudo</h2>
+      <p style="color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; max-width: 40ch;">Hóspedes do Decifer têm acesso a campos, quadras de padel, piscinas, esplanada e espaços de eventos durante a estadia.</p>
+      <a href="#reservar" class="btn btn-accent">Reservar agora</a>
     </div>
   </section>
 
