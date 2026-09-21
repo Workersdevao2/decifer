@@ -1496,6 +1496,20 @@ a.contact-value:hover {
   font-size: 1.05rem;
   font-weight: 300;
 }
+
+/* Desporto hero: group photo — keep faces in frame on tall mobile crops */
+.page-hero--faces {
+  background-position: center 32%;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .page-hero--faces {
+    background-position: center 28%;
+    min-height: 56vh;
+  }
+}
+
 .page-hero--media {
   position: relative;
   padding: 0;
