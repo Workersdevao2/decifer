@@ -1107,6 +1107,115 @@ a.contact-value:hover {
   transform: scale(1.03);
 }
 
+/* Card image slider */
+.card-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-slider__track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-slider__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+
+.card-slider__slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.card-slider__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-slider__nav {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.6rem;
+  pointer-events: none;
+}
+
+.card-slider__btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.card-slider__btn:hover {
+  background: rgba(0, 0, 0, 0.55);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.card-slider__btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.card-slider__dots {
+  position: absolute;
+  bottom: 0.65rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  pointer-events: none;
+}
+
+.card-slider__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.card-slider__dot.is-active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+/* Hide nav when only one slide */
+.card-slider--single .card-slider__nav,
+.card-slider--single .card-slider__dots {
+  display: none;
+}
+
 .class-card__body {
   padding: 1.5rem 1.5rem 1.65rem;
   display: flex;
