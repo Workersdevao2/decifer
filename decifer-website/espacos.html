@@ -55,7 +55,7 @@
     </ul>
   </nav>
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--media" style="background-image: url('images/espacos-hero.jpg');">
     <div class="container">
       <p class="uppercase section-subtitle">Aluguer de Espaços</p>
       <h1>Espaços para todas as ocasiões</h1>
@@ -65,74 +65,150 @@
 
   <section class="section">
     <div class="container">
-      <div class="cards-grid">
-        <article class="card">
-          <div class="card-image">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=800&q=80" alt="Sala de Conferências" width="800" height="500">
+      <div class="text-center mb-4">
+        <p class="uppercase section-subtitle">Opções</p>
+        <h2 class="section-title">O que pode reservar</h2>
+        <p style="margin: 0 auto; max-width: 42ch;">Eventos, alojamento e desporto no mesmo complexo.</p>
+      </div>
+
+      <div class="class-list">
+
+        <article class="class-card">
+          <div class="class-card__media">
+            <img loading="lazy" decoding="async" src="images/espacos-conferencias.jpg" alt="Sala de Conferências" width="1200" height="675">
           </div>
-          <div class="card-body">
-            <h3>Sala de Conferências</h3>
-            <p>Sala climatizada com projector. Até 70 convidados. Estacionamento incluído. Valor sob consulta.</p>
-            <a href="eventos.html#proposta">Consultar</a>
+          <div class="class-card__body">
+            <span class="class-card__label">Interior</span>
+            <h3 class="class-card__title">Sala de Conferências</h3>
+            <p class="class-card__meta">Climatizada · Com projector</p>
+            <div class="class-card__cols">
+              <div>
+                <p class="class-card__section-title">Preço</p>
+                <ul class="price-rows">
+                  <li><span class="price-label">Aluguer</span><span class="price-value">Sob consulta</span></li>
+                </ul>
+              </div>
+              <div>
+                <p class="class-card__section-title">Detalhes</p>
+                <ul>
+                  <li>Até 70 convidados</li>
+                  <li>Estacionamento incluído</li>
+                  <li>Ideal para reuniões e workshops</li>
+                </ul>
+              </div>
+            </div>
+            <div class="class-card__action">
+              <a href="eventos.html#proposta" class="btn btn-sm">Consultar</a>
+            </div>
           </div>
         </article>
-        <article class="card">
-          <div class="card-image">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1575429198097-0414ec48eac9?w=800&q=80" alt="Esplanada" width="800" height="500">
+
+        <article class="class-card">
+          <div class="class-card__media">
+            <img loading="lazy" decoding="async" src="images/espacos-esplanada.jpg" alt="Esplanada" width="1200" height="675">
           </div>
-          <div class="card-body">
-            <h3>Esplanada</h3>
-            <p>Área ampla junto às piscinas, com bar e zona de serviço. Até 300 convidados. Valor sob consulta.</p>
-            <a href="eventos.html#proposta">Consultar</a>
+          <div class="class-card__body">
+            <span class="class-card__label">Ar livre</span>
+            <h3 class="class-card__title">Esplanada</h3>
+            <p class="class-card__meta">Junto às piscinas · Grande capacidade</p>
+            <div class="class-card__cols">
+              <div>
+                <p class="class-card__section-title">Preço</p>
+                <ul class="price-rows">
+                  <li><span class="price-label">Aluguer</span><span class="price-value">Sob consulta</span></li>
+                </ul>
+              </div>
+              <div>
+                <p class="class-card__section-title">Detalhes</p>
+                <ul>
+                  <li>Até 300 convidados</li>
+                  <li>Área de serviço e bar</li>
+                  <li>Estacionamento incluído</li>
+                </ul>
+              </div>
+            </div>
+            <div class="class-card__action">
+              <a href="eventos.html#proposta" class="btn btn-sm">Consultar</a>
+            </div>
           </div>
         </article>
-        <article class="card">
-          <div class="card-image">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="32 Suítes" width="800" height="500">
+
+        <article class="class-card">
+          <div class="class-card__media">
+            <img loading="lazy" decoding="async" src="images/espacos-suites.jpg" alt="32 Suítes" width="1200" height="675">
           </div>
-          <div class="card-body">
-            <h3>32 Suítes</h3>
-            <p>Alojamento com pequeno-almoço, estacionamento e internet. Suite Casal e Quarto Duplo disponíveis.</p>
-            <a href="alojamento.html" class="btn btn-sm">Ver alojamento</a>
+          <div class="class-card__body">
+            <span class="class-card__label">Hospedagem</span>
+            <h3 class="class-card__title">32 Suítes</h3>
+            <p class="class-card__meta">Suite Casal e Quarto Duplo</p>
+            <div class="class-card__cols">
+              <div>
+                <p class="class-card__section-title">A partir de</p>
+                <ul class="price-rows">
+                  <li><span class="price-label">Suite Casal / noite</span><span class="price-value">80.000 Kz</span></li>
+                  <li><span class="price-label">Quarto Duplo / noite</span><span class="price-value">90.000 Kz</span></li>
+                </ul>
+              </div>
+              <div>
+                <p class="class-card__section-title">Inclui</p>
+                <ul>
+                  <li>Pequeno-almoço</li>
+                  <li>Estacionamento</li>
+                  <li>Internet / Wi-Fi</li>
+                </ul>
+              </div>
+            </div>
+            <div class="class-card__action">
+              <a href="alojamento.html" class="btn btn-sm">Ver alojamento</a>
+            </div>
           </div>
         </article>
+
       </div>
     </div>
   </section>
 
   <section class="split">
     <div class="split-media">
-      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80" alt="Campo de Futebol" width="1200" height="800">
+      <img loading="lazy" decoding="async" src="images/espacos-campo.jpg" alt="Campo de relva sintética" width="1200" height="800">
     </div>
     <div class="split-content">
       <p class="uppercase section-subtitle">Desporto</p>
       <h2>Campo de relva sintética</h2>
       <p>Campo completo ou meio-campo, com ou sem balneário. Ideal para jogos, treinos e eventos desportivos.</p>
-      <p style="font-size: 0.95rem; margin: 1rem 0;">Campo completo (1 h): 100.000 Kz (com balneário) / 50.000 Kz (sem)<br>
-        Meio-campo (1 h): 50.000 Kz (com) / 25.000 Kz (sem)</p>
-      <a href="desporto.html" class="btn">Ver preços de desporto</a>
+      <ul class="price-rows" style="margin: 1.25rem 0; max-width: 320px;">
+        <li><span class="price-label">Completo c/ balneário</span><span class="price-value">100.000 Kz</span></li>
+        <li><span class="price-label">Completo s/ balneário</span><span class="price-value">50.000 Kz</span></li>
+        <li><span class="price-label">Meio-campo c/ balneário</span><span class="price-value">50.000 Kz</span></li>
+        <li><span class="price-label">Meio-campo s/ balneário</span><span class="price-value">25.000 Kz</span></li>
+      </ul>
+      <a href="aluguer.html#pedido" class="btn btn-sm">Reservar campo</a>
     </div>
   </section>
 
   <section class="split reverse">
     <div class="split-media">
-      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&q=80" alt="Quadras de Padel" width="1200" height="800">
+      <img loading="lazy" decoding="async" src="images/espacos-padel.jpg" alt="Quadras de Padel" width="1200" height="800">
     </div>
     <div class="split-content">
       <p class="uppercase section-subtitle">Padel</p>
       <h2>Quadras de Padel</h2>
       <p>Aluguer por hora ou 1h30. Aulas e packs disponíveis. Reservas de padel: 929 797 204.</p>
-      <p style="font-size: 0.95rem; margin: 1rem 0;">1 hora — 15.000 Kz · 1h30 — 22.500 Kz</p>
-      <a href="aluguer.html#pedido">Reservar Padel</a>
+      <ul class="price-rows" style="margin: 1.25rem 0; max-width: 280px;">
+        <li><span class="price-label">1 hora</span><span class="price-value">15.000 Kz</span></li>
+        <li><span class="price-label">1h30</span><span class="price-value">22.500 Kz</span></li>
+      </ul>
+      <a href="aluguer.html#pedido" class="btn btn-sm">Reservar padel</a>
     </div>
   </section>
 
-  <section class="section" style="background: var(--color-bg-alt);">
-    <div class="container text-center">
-      <p class="uppercase section-subtitle">Ideal para</p>
-      <h2 class="section-title">Casamentos, noivados, aniversários, batizados, corporativos e team building</h2>
-      <p style="margin: 0 auto 2rem;">Combine espaços de lazer, desporto e alojamento num único local.</p>
-      <a href="eventos.html#proposta">Pedir proposta</a>
+  <section class="cta-band" style="background-image: url('images/espacos-cta.jpg');">
+    <div class="cta-band-overlay"></div>
+    <div class="container" style="position: relative; z-index: 1;">
+      <p class="uppercase" style="color: rgba(255,255,255,0.65); margin-bottom: 0.75rem; letter-spacing: 0.1em; font-size: 0.8rem;">Ideal para</p>
+      <h2 style="color: #fff; margin-bottom: 1rem;">Eventos de todos os tipos</h2>
+      <p style="color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; max-width: 40ch;">Casamentos, aniversários, batizados, corporativos e team building — combine lazer, desporto e alojamento.</p>
+      <a href="eventos.html#proposta" class="btn btn-accent">Pedir proposta</a>
     </div>
   </section>
 
