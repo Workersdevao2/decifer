@@ -1,6 +1,5 @@
 /**
  * Decifer Sport Resort — PT / EN
- * Toggle outside the hamburger; preference stored in localStorage.
  */
 (function () {
   const STORAGE_KEY = "decifer-lang";
@@ -11,7 +10,7 @@
   "Alojamento": "Accommodation",
   "Eventos": "Events",
   "Espaços": "Venues",
-  "Inscrição": "Registration",
+  "Inscrição": "Enrolment",
   "Contacto": "Contact",
   "Menu": "Menu",
   "Navegação": "Navigation",
@@ -107,9 +106,7 @@
   "Material: Touca 12.000 · Óculos 10.000 · Fato de banho 15.000 · Calções 12.000 Kz": "Gear: Cap 12,000 · Goggles 10,000 · Swimsuit 15,000 · Shorts 12,000 Kz",
   "2ª a 6ª feira: 08:00–21:00": "Mon–Fri: 08:00–21:00",
   "Sábado: 08:00–12:00": "Saturday: 08:00–12:00",
-  "2ª a 6ª feira: 08:00–21:00
-Sábado: 08:00–12:00": "Mon–Fri: 08:00–21:00
-Saturday: 08:00–12:00",
+  "2Âª a 6Âª feira: 08:00â21:00\nSÃ¡bado: 08:00â12:00": "MonâFri: 08:00â21:00\nSaturday: 08:00â12:00",
   "Dos 5 anos à idade adulta · 1 hora de aula": "From age 5 to adults · 1-hour class",
   "Aula individual avulsa": "Single private lesson",
   "Individual 1x/semana": "Private 1x/week",
@@ -397,24 +394,15 @@ Saturday: 08:00–12:00",
   "Ver desporto": "View sports",
   "Ver espaços": "View venues",
   "Visite-nos": "Visit us",
-  "Área de serviço e bar": "Service and bar area"
-,
-  "2ª e 5ª ou 3ª e 6ª feira": "Mon & Thu or Tue & Fri",
+  "Área de serviço e bar": "Service and bar area",
   "2ª a 6ª feira: 08:00–21:00<br>Sábado: 08:00–12:00": "Mon–Fri: 08:00–21:00<br>Saturday: 08:00–12:00",
   "3ª e 5ª feira: 17:00–21:00<br>Sábado: 08:00–12:00": "Tue & Thu: 17:00–21:00<br>Saturday: 08:00–12:00",
   "3ª, 5ª feira e Sábado<br>17:00–20:00": "Tue, Thu and Saturday<br>17:00–20:00",
   "2ª a 6ª feira<br>Horário indefinido": "Monday to Friday<br>Flexible hours",
   "<strong>Nota importante.</strong> Mensalidades de 1 a 10 de cada mês. Após o dia 10 aplica-se multa de 10%. Sem regularização até ao dia 30, o aluno fica impedido de treinar. Para trancar a modalidade, contacte-nos; caso contrário, os meses em dívida devem ser liquidados.": "<strong>Important note.</strong> Fees are due from the 1st to the 10th of each month. After the 10th a 10% late fee applies. Without payment by the 30th, the student cannot train. To freeze a modality, contact us; otherwise outstanding months must be settled.",
-  "Também pode contactar directamente:": "You can also contact us directly:",
-  "Reservas:": "Bookings:",
-  "04–12 anos: 17h–18h ou 18h–19h": "Ages 4–12: 5–6pm or 6–7pm",
-  "13–15 anos: 19h–20h": "Ages 13–15: 7–8pm",
-  "16–19 anos: 20h–21h": "Ages 16–19: 8–9pm",
-  "Material: Touca 12.000 · Óculos 10.000 · Fato de banho 15.000 · Calções 12.000 Kz": "Gear: Cap 12,000 · Goggles 10,000 · Swimsuit 15,000 · Shorts 12,000 Kz"
-,
   "Escolas": "Schools",
-  "Campo": "Pitch",
-  "Material: Touca 12.000 · Óculos 10.000 · Fato de banho 15.000 · Calções 12.000 Kz": "Gear: Cap 12,000 · Goggles 10,000 · Swimsuit 15,000 · Shorts 12,000 Kz"
+  "en": "pt",
+  "true": "false"
 };
 
   function currentLang() {
@@ -434,53 +422,39 @@ Saturday: 08:00–12:00",
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const pt = el.getAttribute("data-i18n");
       if (!pt) return;
-      if (lang === "pt") {
-        if (el.getAttribute("data-i18n-html") === "1") el.innerHTML = pt;
-        else el.textContent = pt;
+      const val = lang === "en" ? (dict[pt] != null ? dict[pt] : pt) : pt;
+      if (el.getAttribute("data-i18n-html") === "1") {
+        el.innerHTML = val;
       } else {
-        const en = dict[pt];
-        if (en != null) {
-          if (el.getAttribute("data-i18n-html") === "1") el.innerHTML = en;
-          else el.textContent = en;
-        }
+        el.textContent = val;
       }
     });
 
     document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
       const pt = el.getAttribute("data-i18n-placeholder");
       if (!pt) return;
-      el.setAttribute("placeholder", lang === "en" && dict[pt] ? dict[pt] : pt);
+      el.setAttribute("placeholder", lang === "en" && dict[pt] != null ? dict[pt] : pt);
     });
 
     document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
       const pt = el.getAttribute("data-i18n-aria");
       if (!pt) return;
-      el.setAttribute("aria-label", lang === "en" && dict[pt] ? dict[pt] : pt);
+      el.setAttribute("aria-label", lang === "en" && dict[pt] != null ? dict[pt] : pt);
     });
 
     document.querySelectorAll("[data-i18n-title]").forEach((el) => {
       const pt = el.getAttribute("data-i18n-title");
       if (!pt) return;
-      const val = lang === "en" && dict[pt] ? dict[pt] : pt;
-      document.title = val;
+      document.title = lang === "en" && dict[pt] != null ? dict[pt] : pt;
     });
 
-    // option elements
-    
-    // data-label on form fields (WhatsApp message builder)
     document.querySelectorAll("[data-label]").forEach((el) => {
       if (!el.hasAttribute("data-label-pt")) {
         el.setAttribute("data-label-pt", el.getAttribute("data-label") || "");
       }
       const pt = el.getAttribute("data-label-pt");
       if (!pt) return;
-      el.setAttribute("data-label", lang === "en" && dict[pt] ? dict[pt] : pt);
-    });
-
-    document.querySelectorAll("option[data-i18n]").forEach((el) => {
-      const pt = el.getAttribute("data-i18n");
-      if (!pt) return;
-      el.textContent = lang === "en" && dict[pt] ? dict[pt] : pt;
+      el.setAttribute("data-label", lang === "en" && dict[pt] != null ? dict[pt] : pt);
     });
   }
 
@@ -504,7 +478,9 @@ Saturday: 08:00–12:00",
     updateToggleUI(lang);
 
     document.querySelectorAll("[data-lang-toggle]").forEach((btn) => {
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
         const next = currentLang() === "pt" ? "en" : "pt";
         setLang(next);
       });
