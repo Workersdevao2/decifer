@@ -1,0 +1,519 @@
+/**
+ * Decifer Sport Resort — PT / EN
+ * Toggle outside the hamburger; preference stored in localStorage.
+ */
+(function () {
+  const STORAGE_KEY = "decifer-lang";
+  const dict = {
+  "Início": "Home",
+  "Desporto": "Sports",
+  "Aluguer": "Rentals",
+  "Alojamento": "Accommodation",
+  "Eventos": "Events",
+  "Espaços": "Venues",
+  "Inscrição": "Registration",
+  "Contacto": "Contact",
+  "Menu": "Menu",
+  "Navegação": "Navigation",
+  "Morada": "Address",
+  "WhatsApp": "WhatsApp",
+  "Instagram": "Instagram",
+  "Facebook": "Facebook",
+  "© 2026 Decifer Sport Resort. Todos os direitos reservados.": "© 2026 Decifer Sport Resort. All rights reserved.",
+  "Resort desportivo com padel, futebol, natação, 32 suítes e espaços para eventos.": "Sports resort with padel, football, swimming, 32 suites and event spaces.",
+  "Rua do Centro de Distribuição da EPAL": "Rua do Centro de Distribuição da EPAL",
+  "Benfica II, Lar do Patriota": "Benfica II, Lar do Patriota",
+  "Rua do Centro de Distribuição da EPAL, Benfica II, Lar do Patriota.": "Rua do Centro de Distribuição da EPAL, Benfica II, Lar do Patriota.",
+  "Saber mais": "Learn more",
+  "Ver quartos": "View rooms",
+  "Reservar": "Book",
+  "Contactar": "Contact us",
+  "Explorar Desporto": "Explore Sports",
+  "Explorar Alojamento": "Explore Accommodation",
+  "Ver Eventos": "View Events",
+  "Ver todos os eventos": "View all events",
+  "Ver aluguer": "View rentals",
+  "Inscrever": "Enrol",
+  "Formulário de inscrição": "Enrolment form",
+  "Enviar via WhatsApp": "Send via WhatsApp",
+  "Pedir proposta": "Request a proposal",
+  "Explorar eventos & espaços": "Explore events & venues",
+  "Explorar eventos &amp; espaços": "Explore events & venues",
+  "Reservar padel": "Book padel",
+  "Reservar piscina": "Book pool",
+  "Reservar campo": "Book pitch",
+  "Preços": "Prices",
+  "Horários": "Schedule",
+  "Detalhes": "Details",
+  "Notas": "Notes",
+  "Inclui": "Includes",
+  "A partir de": "From",
+  "Formulário": "Form",
+  "Agenda": "Calendar",
+  "Bem-vindo": "Welcome",
+  "Formação": "Training",
+  "Escolinha": "Academy",
+  "Aulas": "Classes",
+  "Sócio": "Membership",
+  "Campo": "Pitch",
+  "Quadra": "Court",
+  "Acesso": "Access",
+  "Interior": "Indoor",
+  "Ar livre": "Outdoors",
+  "Hospedagem": "Stay",
+  "Água": "Water",
+  "Ideal para": "Ideal for",
+  "Atletas": "Athletes",
+  "Padel": "Padel",
+  "Excelência em desporto, lazer e hospitalidade": "Excellence in sport, leisure and hospitality",
+  "Padel, futebol, natação, alojamento e eventos num ambiente contemporâneo e cuidadosamente projetado.": "Padel, football, swimming, accommodation and events in a contemporary, carefully designed setting.",
+  "Um destino completo para corpo e mente": "A complete destination for body and mind",
+  "O Decifer Sport Resort combina instalações desportivas de referência com espaços de lazer, restauração e alojamento. Pensado para atletas, famílias e empresas que valorizam qualidade e detalhe.": "Decifer Sport Resort combines top sports facilities with leisure, dining and accommodation. Designed for athletes, families and companies that value quality and detail.",
+  "Padel & Futebol": "Padel & Football",
+  "Courts de padel profissionais e campos de futebol com relvado sintético. Escola de futebol e treinos disponíveis.": "Professional padel courts and synthetic football pitches. Football academy and training available.",
+  "Piscinas & Natação": "Pools & Swimming",
+  "Piscinas olímpicas e de lazer, área infantil e aulas de natação. Ambiente tropical com espaços de descanso.": "Competition and leisure pools, kids’ area and swimming lessons. A relaxed setting with rest areas.",
+  "Alojamento Premium": "Premium Accommodation",
+  "32 suítes com pequeno-almoço, estacionamento e internet. Suite Casal e Quarto Duplo.": "32 suites with breakfast, parking and internet. Double suite and twin room.",
+  "Descanse com o mesmo padrão de excelência": "Rest to the same standard of excellence",
+  "32 suítes com pequeno-almoço incluído, estacionamento e internet. Check-in 14h · Check-out 12h. Acesso a todas as instalações.": "32 suites with breakfast included, parking and internet. Check-in 2pm · Check-out 12pm. Access to all facilities.",
+  "Espaço ideal para competições e celebrações": "The ideal space for competitions and celebrations",
+  "Organizamos torneios de padel e futebol, aulas abertas, eventos corporativos e celebrações privadas. Contacte-nos para criar o seu próximo momento.": "We host padel and football tournaments, open classes, corporate events and private celebrations. Contact us to create your next occasion.",
+  "Próximos Eventos": "Upcoming Events",
+  "Torneios, aulas abertas e celebrações no Decifer — assim que houver datas confirmadas, aparecem aqui.": "Tournaments, open classes and celebrations at Decifer — confirmed dates will appear here.",
+  "Nenhum evento agendado de momento": "No events scheduled at the moment",
+  "Ainda não há próximos eventos publicados. Siga o Instagram para novidades ou contacte-nos para organizar o seu próprio evento no resort.": "There are no upcoming events published yet. Follow us on Instagram for news, or contact us to organise your own event at the resort.",
+  "Pronto para a sua próxima experiência?": "Ready for your next experience?",
+  "Contacte-nos via WhatsApp para reservas, informações ou pedidos personalizados.": "Contact us on WhatsApp for bookings, information or tailored requests.",
+  "Aulas e escolinhas": "Classes and academies",
+  "Futebol, natação, padel, jiu-jitsu e sócio de natação — preços, horários e inscrição.": "Football, swimming, padel, jiu-jitsu and swim membership — prices, schedules and enrolment.",
+  "Aulas / Escolinhas": "Classes / Academies",
+  "Inscrições abertas. Documentação e avaliação médica desportiva necessárias para todas as modalidades.": "Enrolments open. Documentation and sports medical assessment required for all modalities.",
+  "Futebol": "Football",
+  "Dos 4 aos 19 anos": "Ages 4 to 19",
+  "Reinscrição": "Re-enrolment",
+  "Mensalidade": "Monthly fee",
+  "Kit de treino": "Training kit",
+  "2ª e 5ª ou 3ª e 6ª feira": "Mon & Thu or Tue & Fri",
+  "04–12 anos: 17h–18h ou 18h–19h": "Ages 4–12: 5–6pm or 6–7pm",
+  "13–15 anos: 19h–20h": "Ages 13–15: 7–8pm",
+  "16–19 anos: 20h–21h": "Ages 16–19: 8–9pm",
+  "Natação": "Swimming",
+  "Dos 4 anos à idade adulta · 1 hora de aula": "From age 4 to adults · 1-hour class",
+  "1x por semana": "1x per week",
+  "2x por semana": "2x per week",
+  "3x por semana": "3x per week",
+  "5x por semana": "5x per week",
+  "Material: Touca 12.000 · Óculos 10.000 · Fato de banho 15.000 · Calções 12.000 Kz": "Gear: Cap 12,000 · Goggles 10,000 · Swimsuit 15,000 · Shorts 12,000 Kz",
+  "2ª a 6ª feira: 08:00–21:00": "Mon–Fri: 08:00–21:00",
+  "Sábado: 08:00–12:00": "Saturday: 08:00–12:00",
+  "2ª a 6ª feira: 08:00–21:00
+Sábado: 08:00–12:00": "Mon–Fri: 08:00–21:00
+Saturday: 08:00–12:00",
+  "Dos 5 anos à idade adulta · 1 hora de aula": "From age 5 to adults · 1-hour class",
+  "Aula individual avulsa": "Single private lesson",
+  "Individual 1x/semana": "Private 1x/week",
+  "Individual 2x/semana": "Private 2x/week",
+  "2 pessoas 1x/semana": "2 people 1x/week",
+  "2 pessoas 2x/semana": "2 people 2x/week",
+  "4 pessoas 1x/semana": "4 people 1x/week",
+  "4 pessoas 2x/semana": "4 people 2x/week",
+  "3ª e 5ª feira: 17:00–21:00": "Tue & Thu: 17:00–21:00",
+  "Reservas:": "Bookings:",
+  "Jiu-Jitsu": "Jiu-Jitsu",
+  "Dos 5 anos à idade adulta": "From age 5 to adults",
+  "3ª, 5ª feira e Sábado": "Tue, Thu and Saturday",
+  "17:00–20:00": "17:00–20:00",
+  "Natação — Treino livre": "Swimming — Open training",
+  "Acesso para treino livre na piscina": "Open training access to the pool",
+  "2ª a 6ª feira": "Monday to Friday",
+  "Horário indefinido": "Flexible hours",
+  "Documentação necessária (todas as modalidades)": "Required documents (all modalities)",
+  "2 fotografias": "2 photographs",
+  "1 cópia do BI do aluno": "1 copy of the student’s ID",
+  "1 cópia do BI do encarregado (quando aplicável)": "1 copy of the guardian’s ID (when applicable)",
+  "Avaliação Médica Desportiva (10.000 Kz)": "Sports medical assessment (10,000 Kz)",
+  "Nota importante.": "Important note.",
+  "Mensalidades de 1 a 10 de cada mês. Após o dia 10 aplica-se multa de 10%. Sem regularização até ao dia 30, o aluno fica impedido de treinar. Para trancar a modalidade, contacte-nos; caso contrário, os meses em dívida devem ser liquidados.": "Fees are due from the 1st to the 10th of each month. After the 10th a 10% late fee applies. Without payment by the 30th, the student cannot train. To freeze a modality, contact us; otherwise outstanding months must be settled.",
+  "Quer alugar campo, padel ou piscina?": "Want to rent a pitch, padel court or pool?",
+  "Reservas avulsas têm página e formulário próprios.": "One-off bookings have their own page and form.",
+  "Aluguer de campos, quadras e piscina": "Pitch, court and pool rental",
+  "Campo completo ou meio-campo, com ou sem balneário. Ideal para jogos, treinos e eventos desportivos.": "Full or half pitch, with or without changing rooms. Ideal for matches, training and sports events.",
+  "Relva sintética": "Synthetic turf",
+  "1 hora · Completo ou meio-campo": "1 hour · Full or half pitch",
+  "Campo completo": "Full pitch",
+  "Meio-campo": "Half pitch",
+  "Com balneário": "With changing rooms",
+  "Sem balneário": "Without changing rooms",
+  "Aluguer de quadra · Reservas: 929 797 204": "Court rental · Bookings: 929 797 204",
+  "1 hora": "1 hour",
+  "1h30": "1.5 hours",
+  "Reservas dedicadas de padel": "Dedicated padel bookings",
+  "Piscina": "Pool",
+  "Horário 08:00–17:00": "Hours 08:00–17:00",
+  "0–2 anos": "Ages 0–2",
+  "Grátis": "Free",
+  "3–10 anos": "Ages 3–10",
+  "11 anos – adulto": "Age 11 – adult",
+  "Feriados / fins de semana": "Holidays / weekends",
+  "Acesso diário durante o horário indicado.": "Day access during the stated hours.",
+  "Ideal para famílias e grupos": "Ideal for families and groups",
+  "Reserve com antecedência em dias de maior procura": "Book ahead on busy days",
+  "Pedido de aluguer": "Rental request",
+  "Pedidos de Padel são encaminhados para 929 797 204. Restantes para 936 724 676.": "Padel requests go to 929 797 204. All others to 936 724 676.",
+  "Alojamento de excelência": "Premium accommodation",
+  "Alojamento contemporâneo com pequeno-almoço incluído, estacionamento e internet. Acesso a todas as instalações do resort.": "Contemporary accommodation with breakfast included, parking and internet. Access to all resort facilities.",
+  "Suite Casal": "Double Suite",
+  "Quarto Duplo": "Twin Room",
+  "Cama Extra": "Extra Bed",
+  "Cama de casal · Casa de banho privativa · Ar condicionado": "Double bed · Private bathroom · Air conditioning",
+  "Duas camas individuais · Ideal para amigos ou equipa": "Two single beds · Ideal for friends or teams",
+  "Sob pedido · Aumenta a capacidade do quarto ou suite": "On request · Increases room or suite capacity",
+  "noite": "night",
+  "Pequeno-almoço, estacionamento e Wi-Fi incluídos em todas as unidades.": "Breakfast, parking and Wi-Fi included in all units.",
+  "Check-in 14:00 · Check-out 12:00": "Check-in 14:00 · Check-out 12:00",
+  "Acesso às instalações desportivas e de lazer": "Access to sports and leisure facilities",
+  "Hóspedes do Decifer têm acesso a campos, quadras de padel, piscinas, esplanada e espaços de eventos durante a estadia.": "Decifer guests have access to pitches, padel courts, pools, the esplanade and event spaces during their stay.",
+  "Reservar estadia": "Book your stay",
+  "Indique as datas e o tipo de quarto. Enviamos a disponibilidade via WhatsApp.": "Tell us your dates and room type. We confirm availability via WhatsApp.",
+  "Eventos e celebrações": "Events and celebrations",
+  "Casamentos, aniversários, batizados, corporativos e team building — combine lazer, desporto e alojamento.": "Weddings, birthdays, christenings, corporate and team building — combine leisure, sport and accommodation.",
+  "Toldos": "Canopies",
+  "Esplanada": "Esplanade",
+  "Sala de Conferências": "Conference Room",
+  "Espaço coberto · Ambiente acolhedor": "Covered space · Welcoming setting",
+  "Junto às piscinas · Grande capacidade": "By the pools · Large capacity",
+  "Climatizada · Com projector": "Air-conditioned · With projector",
+  "Climatizada · Ideal para reuniões": "Air-conditioned · Ideal for meetings",
+  "Sob consulta": "On request",
+  "Os preços incluem somente o espaço. Serviços extras sob consulta.": "Prices include the space only. Extra services on request.",
+  "Casamentos": "Weddings",
+  "Aniversários": "Birthdays",
+  "Corporativo": "Corporate",
+  "Cerimónias e receções junto às piscinas e esplanada.": "Ceremonies and receptions by the pools and esplanade.",
+  "Celebrações privadas e eventos de empresa no mesmo complexo.": "Private celebrations and company events in the same complex.",
+  "Reuniões, workshops e actividades de equipa.": "Meetings, workshops and team activities.",
+  "Pedido de proposta": "Proposal request",
+  "Casamentos, aniversários, corporativos e mais. Resposta via WhatsApp.": "Weddings, birthdays, corporate and more. Reply via WhatsApp.",
+  "Eventos de todos os tipos": "Events of every kind",
+  "Casamentos, noivados, aniversários, batizados, eventos corporativos e team building. Espaços versáteis com estacionamento e apoio logístico.": "Weddings, engagements, birthdays, christenings, corporate events and team building. Flexible spaces with parking and logistics support.",
+  "Os nossos espaços": "Our venues",
+  "Sala de conferências, esplanada, 32 suítes, campo de relva sintética e quadras de padel.": "Conference room, esplanade, 32 suites, synthetic pitch and padel courts.",
+  "32 Suítes": "32 Suites",
+  "Suite Casal e Quarto Duplo": "Double Suite and Twin Room",
+  "Campo de relva sintética": "Synthetic turf pitch",
+  "Quadras de Padel": "Padel courts",
+  "Aluguer por hora ou 1h30. Aulas e packs disponíveis. Reservas de padel: 929 797 204.": "Rental by the hour or 1.5 hours. Lessons and packs available. Padel bookings: 929 797 204.",
+  "Grande capacidade": "Large capacity",
+  "Espaços adaptáveis, capacidade até 300 convidados.": "Flexible spaces, capacity up to 300 guests.",
+  "Inscrição em aulas e escolinhas": "Class and academy enrolment",
+  "Preencha o formulário. A mensagem será enviada para o WhatsApp do Decifer para confirmarmos a sua inscrição.": "Fill in the form. A message will open in WhatsApp so we can confirm your enrolment.",
+  "Modalidade": "Modality",
+  "Seleccione": "Select",
+  "Futebol (Escolinha)": "Football (Academy)",
+  "Padel (Aulas)": "Padel (Classes)",
+  "Sócio Natação (Treino livre)": "Swim membership (Open training)",
+  "Nome do aluno": "Student name",
+  "Nome completo": "Full name",
+  "Idade do aluno": "Student age",
+  "Idade": "Age",
+  "Nome do encarregado": "Guardian name",
+  "Encarregado": "Guardian",
+  "Se aplicável": "If applicable",
+  "Telefone / WhatsApp": "Phone / WhatsApp",
+  "Preferência de horário": "Preferred schedule",
+  "Horário preferido": "Preferred time",
+  "Ex: 3ª e 5ª, 17h–18h": "e.g. Tue & Thu, 5–6pm",
+  "Observações": "Notes",
+  "Informação adicional (opcional)": "Additional information (optional)",
+  "Ao enviar, abre-se o WhatsApp com a mensagem pronta. Documentação (BI, fotos, avaliação médica) será indicada na resposta.": "On submit, WhatsApp opens with a ready message. Documents (ID, photos, medical assessment) will be confirmed in the reply.",
+  "Também pode contactar directamente:": "You can also contact us directly:",
+  "Fale connosco": "Get in touch",
+  "Reservas, informações e pedidos personalizados. Prefira o WhatsApp para resposta rápida.": "Bookings, information and tailored requests. Prefer WhatsApp for a faster reply.",
+  "A forma mais rápida de nos contactar é através do WhatsApp.": "The fastest way to reach us is WhatsApp.",
+  "Preferimos o WhatsApp para respostas mais rápidas.": "We prefer WhatsApp for faster replies.",
+  "Contacte-nos para indicações detalhadas.": "Contact us for detailed directions.",
+  "Enviar mensagem": "Send message",
+  "O seu nome": "Your name",
+  "Mensagem": "Message",
+  "Como podemos ajudar?": "How can we help?",
+  "Telefone": "Phone",
+  "Email": "Email",
+  "Tipo de espaço": "Space type",
+  "Campo de futebol": "Football pitch",
+  "Quadra de padel": "Padel court",
+  "Data pretendida": "Preferred date",
+  "Hora": "Time",
+  "Duração": "Duration",
+  "Número de pessoas": "Number of people",
+  "Nome": "Name",
+  "Tipo de quarto": "Room type",
+  "Data de check-in": "Check-in date",
+  "Data de check-out": "Check-out date",
+  "Número de hóspedes": "Number of guests",
+  "Tipo de evento": "Event type",
+  "Casamento": "Wedding",
+  "Aniversário": "Birthday",
+  "Batizado": "Christening",
+  "Team building": "Team building",
+  "Outro": "Other",
+  "Data do evento": "Event date",
+  "Número de convidados": "Number of guests",
+  "Espaço pretendido": "Preferred space",
+  "Indique no formulário de reserva": "State this on the booking form",
+  "Lang": "Lang",
+  "PT": "PT",
+  "EN": "EN",
+  "+244...": "+244...",
+  "32 suítes, esplanada, campo de futebol e quadras de padel — tudo no mesmo complexo.": "32 suites, esplanade, football pitch and padel courts — all in one complex.",
+  "A indicar": "To be confirmed",
+  "Alojamento | Decifer Sport Resort": "Accommodation | Decifer Sport Resort",
+  "Aluguer de Espaços": "Venue Hire",
+  "Aluguer do espaço": "Space rental",
+  "Aluguer e aulas disponíveis": "Rental and classes available",
+  "Aluguer | Decifer Sport Resort": "Rentals | Decifer Sport Resort",
+  "Aniversários & Batizados": "Birthdays & Christenings",
+  "Assunto": "Subject",
+  "Até 300 convidados": "Up to 300 guests",
+  "Até 70 convidados": "Up to 70 guests",
+  "Aulas de Natação": "Swimming classes",
+  "Cama extra": "Extra bed",
+  "Campo completo com balneário": "Full pitch with changing rooms",
+  "Campo completo sem balneário": "Full pitch without changing rooms",
+  "Campo de Futebol / Escolinha": "Football pitch / Academy",
+  "Casamentos, noivados, aniversários, batizados, eventos corporativos e team building. Espaços versáteis com estacionamento.": "Weddings, engagements, birthdays, christenings, corporate events and team building. Flexible spaces with parking.",
+  "Celebração": "Celebration",
+  "Celebrações & Corporativo": "Celebrations & Corporate",
+  "Check-in": "Check-in",
+  "Check-in a partir das 14:00": "Check-in from 14:00",
+  "Check-out": "Check-out",
+  "Check-out até às 12:00": "Check-out until 12:00",
+  "Com pequeno-almoço incluído": "Breakfast included",
+  "Completo c/ balneário": "Full with changing rooms",
+  "Completo e meio-campo": "Full and half pitch",
+  "Completo s/ balneário": "Full without changing rooms",
+  "Conforto": "Comfort",
+  "Consultar": "Enquire",
+  "Consultar disponibilidade": "Check availability",
+  "Contacto | Decifer Sport Resort": "Contact | Decifer Sport Resort",
+  "Corporativos & Team Building": "Corporate & Team Building",
+  "Data": "Date",
+  "Decifer Sport Resort | Resort Desportivo de Excelência": "Decifer Sport Resort | Excellence in Sport & Hospitality",
+  "Descreva o que precisa (opcional)": "Describe what you need (optional)",
+  "Descreva o seu pedido...": "Describe your request...",
+  "Desportivas": "Sports",
+  "Desporto | Decifer Sport Resort": "Sports | Decifer Sport Resort",
+  "Disponível sob pedido": "Available on request",
+  "Empresa": "Company",
+  "Escolha a sua estadia": "Choose your stay",
+  "Espaço preferido": "Preferred space",
+  "Espaços disponíveis": "Available spaces",
+  "Espaços e alojamento": "Venues and accommodation",
+  "Espaços para todas as ocasiões": "Spaces for every occasion",
+  "Espaços | Decifer Sport Resort": "Venues | Decifer Sport Resort",
+  "Esplanada (máx. 300)": "Esplanade (max. 300)",
+  "Estacionamento": "Parking",
+  "Estacionamento incluído": "Parking included",
+  "Eventos no Decifer": "Events at Decifer",
+  "Eventos | Decifer Sport Resort": "Events | Decifer Sport Resort",
+  "Eventos, alojamento e desporto no mesmo complexo.": "Events, accommodation and sport in the same complex.",
+  "Ex: 12": "e.g. 12",
+  "Ex: 18:00 ou 08:00–17:00": "e.g. 18:00 or 08:00–17:00",
+  "Ex: 80": "e.g. 80",
+  "Experiência completa": "Complete experience",
+  "Exterior": "Outdoor",
+  "Extra": "Extra",
+  "Família": "Family",
+  "Fique e aproveite tudo": "Stay and enjoy everything",
+  "Futebol, natação, padel, jiu-jitsu": "Football, swimming, padel, jiu-jitsu",
+  "Futebol, natação, padel, jiu-jitsu e sócio de natação têm página e formulário próprios.": "Football, swimming, padel, jiu-jitsu and swim membership have their own page and form.",
+  "Hora / período": "Time / period",
+  "Ideal para reuniões e workshops": "Ideal for meetings and workshops",
+  "Incluído em todas as unidades": "Included in all units",
+  "Indique o espaço, a data e a hora. A mensagem é enviada para o WhatsApp do Decifer.": "Indicate the space, date and time. The message is sent to Decifer’s WhatsApp.",
+  "Informações": "Information",
+  "Inscrição | Decifer Sport Resort": "Enrolment | Decifer Sport Resort",
+  "Internet / Wi-Fi": "Internet / Wi-Fi",
+  "Localização": "Location",
+  "Meio-campo c/ balneário": "Half pitch with changing rooms",
+  "Meio-campo com balneário": "Half pitch with changing rooms",
+  "Meio-campo s/ balneário": "Half pitch without changing rooms",
+  "Meio-campo sem balneário": "Half pitch without changing rooms",
+  "Momentos que ficam": "Moments that last",
+  "Máximo 300 convidados": "Maximum 300 guests",
+  "Máximo 40 convidados": "Maximum 40 guests",
+  "Máximo 70 convidados": "Maximum 70 guests",
+  "N.º de hóspedes": "No. of guests",
+  "N.º estimado de convidados": "Estimated number of guests",
+  "Noivado (Pedido)": "Engagement (Proposal)",
+  "Não": "No",
+  "O que pode alugar": "What you can rent",
+  "O que pode reservar": "What you can book",
+  "Opcional": "Optional",
+  "Opções": "Options",
+  "Organização de evento": "Event organisation",
+  "Outro assunto": "Other subject",
+  "Padel (1 hora)": "Padel (1 hour)",
+  "Padel (1h30)": "Padel (1.5 hours)",
+  "Padel (reservas)": "Padel (bookings)",
+  "Pedido de alojamento": "Accommodation request",
+  "Pedido especial (opcional)": "Special request (optional)",
+  "Pedir info": "Request info",
+  "Pedir proposta de evento": "Request an event proposal",
+  "Pequeno-almoço": "Breakfast",
+  "Pequeno-almoço incluído": "Breakfast included",
+  "Piscina (acesso diário)": "Pool (day access)",
+  "Por noite": "Per night",
+  "Preço": "Price",
+  "Preços por período. Reserve pelo formulário abaixo ou contacte-nos directamente.": "Prices by period. Book via the form below or contact us directly.",
+  "Procura escolinhas ou aulas?": "Looking for academies or classes?",
+  "Proposta": "Proposal",
+  "Quadras": "Courts",
+  "Quarto": "Room",
+  "Quarto Duplo (90.000 Kz)": "Twin Room (90,000 Kz)",
+  "Quarto Duplo / noite": "Twin Room / night",
+  "Redes sociais": "Social media",
+  "Reserva de alojamento": "Accommodation booking",
+  "Reserva de court de Padel": "Padel court booking",
+  "Reservar agora": "Book now",
+  "Reservas avulsas": "One-off bookings",
+  "Reserve o espaço para o seu jogo ou treino. Independente das escolinhas e aulas.": "Book the space for your match or training — separate from academies and classes.",
+  "Resort Desportivo": "Sports Resort",
+  "Sala climatizada com projector": "Air-conditioned room with projector",
+  "Sala de Conferências (máx. 70)": "Conference Room (max. 70)",
+  "Salão de Eventos e Festas": "Events and party hall",
+  "Serviço de Barmen": "Bartending service",
+  "Sim (40.000 Kz)": "Yes (40,000 Kz)",
+  "Suite": "Suite",
+  "Suite Casal (80.000 Kz)": "Double Suite (80,000 Kz)",
+  "Suite Casal / noite": "Double Suite / night",
+  "Sujeito a disponibilidade": "Subject to availability",
+  "Suítes": "Suites",
+  "Também disponível": "Also available",
+  "Team Building": "Team Building",
+  "Tipos de quarto": "Room types",
+  "Toldos (máx. 40)": "Canopies (max. 40)",
+  "Ver alojamento": "View accommodation",
+  "Ver desporto": "View sports",
+  "Ver espaços": "View venues",
+  "Visite-nos": "Visit us",
+  "Área de serviço e bar": "Service and bar area"
+,
+  "2ª e 5ª ou 3ª e 6ª feira": "Mon & Thu or Tue & Fri",
+  "2ª a 6ª feira: 08:00–21:00<br>Sábado: 08:00–12:00": "Mon–Fri: 08:00–21:00<br>Saturday: 08:00–12:00",
+  "3ª e 5ª feira: 17:00–21:00<br>Sábado: 08:00–12:00": "Tue & Thu: 17:00–21:00<br>Saturday: 08:00–12:00",
+  "3ª, 5ª feira e Sábado<br>17:00–20:00": "Tue, Thu and Saturday<br>17:00–20:00",
+  "2ª a 6ª feira<br>Horário indefinido": "Monday to Friday<br>Flexible hours",
+  "<strong>Nota importante.</strong> Mensalidades de 1 a 10 de cada mês. Após o dia 10 aplica-se multa de 10%. Sem regularização até ao dia 30, o aluno fica impedido de treinar. Para trancar a modalidade, contacte-nos; caso contrário, os meses em dívida devem ser liquidados.": "<strong>Important note.</strong> Fees are due from the 1st to the 10th of each month. After the 10th a 10% late fee applies. Without payment by the 30th, the student cannot train. To freeze a modality, contact us; otherwise outstanding months must be settled.",
+  "Também pode contactar directamente:": "You can also contact us directly:",
+  "Reservas:": "Bookings:",
+  "04–12 anos: 17h–18h ou 18h–19h": "Ages 4–12: 5–6pm or 6–7pm",
+  "13–15 anos: 19h–20h": "Ages 13–15: 7–8pm",
+  "16–19 anos: 20h–21h": "Ages 16–19: 8–9pm",
+  "Material: Touca 12.000 · Óculos 10.000 · Fato de banho 15.000 · Calções 12.000 Kz": "Gear: Cap 12,000 · Goggles 10,000 · Swimsuit 15,000 · Shorts 12,000 Kz"
+,
+  "Escolas": "Schools",
+  "Campo": "Pitch",
+  "Material: Touca 12.000 · Óculos 10.000 · Fato de banho 15.000 · Calções 12.000 Kz": "Gear: Cap 12,000 · Goggles 10,000 · Swimsuit 15,000 · Shorts 12,000 Kz"
+};
+
+  function currentLang() {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === "en" || stored === "pt") return stored;
+    return "pt";
+  }
+
+  function setLang(lang) {
+    localStorage.setItem(STORAGE_KEY, lang);
+    document.documentElement.lang = lang === "en" ? "en" : "pt";
+    applyTranslations(lang);
+    updateToggleUI(lang);
+  }
+
+  function applyTranslations(lang) {
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const pt = el.getAttribute("data-i18n");
+      if (!pt) return;
+      if (lang === "pt") {
+        if (el.getAttribute("data-i18n-html") === "1") el.innerHTML = pt;
+        else el.textContent = pt;
+      } else {
+        const en = dict[pt];
+        if (en != null) {
+          if (el.getAttribute("data-i18n-html") === "1") el.innerHTML = en;
+          else el.textContent = en;
+        }
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+      const pt = el.getAttribute("data-i18n-placeholder");
+      if (!pt) return;
+      el.setAttribute("placeholder", lang === "en" && dict[pt] ? dict[pt] : pt);
+    });
+
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      const pt = el.getAttribute("data-i18n-aria");
+      if (!pt) return;
+      el.setAttribute("aria-label", lang === "en" && dict[pt] ? dict[pt] : pt);
+    });
+
+    document.querySelectorAll("[data-i18n-title]").forEach((el) => {
+      const pt = el.getAttribute("data-i18n-title");
+      if (!pt) return;
+      const val = lang === "en" && dict[pt] ? dict[pt] : pt;
+      document.title = val;
+    });
+
+    // option elements
+    
+    // data-label on form fields (WhatsApp message builder)
+    document.querySelectorAll("[data-label]").forEach((el) => {
+      if (!el.hasAttribute("data-label-pt")) {
+        el.setAttribute("data-label-pt", el.getAttribute("data-label") || "");
+      }
+      const pt = el.getAttribute("data-label-pt");
+      if (!pt) return;
+      el.setAttribute("data-label", lang === "en" && dict[pt] ? dict[pt] : pt);
+    });
+
+    document.querySelectorAll("option[data-i18n]").forEach((el) => {
+      const pt = el.getAttribute("data-i18n");
+      if (!pt) return;
+      el.textContent = lang === "en" && dict[pt] ? dict[pt] : pt;
+    });
+  }
+
+  function updateToggleUI(lang) {
+    document.querySelectorAll("[data-lang-toggle]").forEach((btn) => {
+      const isEn = lang === "en";
+      btn.setAttribute("aria-pressed", isEn ? "true" : "false");
+      const ptEl = btn.querySelector("[data-lang-pt]");
+      const enEl = btn.querySelector("[data-lang-en]");
+      if (ptEl && enEl) {
+        ptEl.classList.toggle("is-active", !isEn);
+        enEl.classList.toggle("is-active", isEn);
+      }
+    });
+  }
+
+  function init() {
+    const lang = currentLang();
+    document.documentElement.lang = lang === "en" ? "en" : "pt";
+    applyTranslations(lang);
+    updateToggleUI(lang);
+
+    document.querySelectorAll("[data-lang-toggle]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const next = currentLang() === "pt" ? "en" : "pt";
+        setLang(next);
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
