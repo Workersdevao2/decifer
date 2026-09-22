@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscrição | Decifer Sport Resort</title>
+  <title data-i18n-title="Inscrição | Decifer Sport Resort">Inscrição | Decifer Sport Resort</title>
   <meta name="description" content="Inscrição nas escolinhas e aulas do Decifer Sport Resort — Futebol, Natação, Padel, Jiu-Jitsu e Sócio Natação.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,43 +23,50 @@
       </a>
       <nav class="nav-desktop">
         <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="desporto.html">Desporto</a></li>
-          <li><a href="aluguer.html">Aluguer</a></li>
-          <li><a href="alojamento.html">Alojamento</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="espacos.html">Espaços</a></li>
-          <li><a href="inscricao.html" class="active">Inscrição</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="index.html" data-i18n="Início">Início</a></li>
+          <li><a href="desporto.html" data-i18n="Desporto">Desporto</a></li>
+          <li><a href="aluguer.html" data-i18n="Aluguer">Aluguer</a></li>
+          <li><a href="alojamento.html" data-i18n="Alojamento">Alojamento</a></li>
+          <li><a href="eventos.html" data-i18n="Eventos">Eventos</a></li>
+          <li><a href="espacos.html" data-i18n="Espaços">Espaços</a></li>
+          <li><a href="inscricao.html" class="active" data-i18n="Inscrição">Inscrição</a></li>
+          <li><a href="contacto.html" data-i18n="Contacto">Contacto</a></li>
         </ul>
       </nav>
-      <button class="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header-actions">
+        <button type="button" class="lang-toggle" data-lang-toggle aria-label="Language" title="PT / EN">
+          <span data-lang-pt class="is-active">PT</span>
+          <span class="lang-toggle__sep">/</span>
+          <span data-lang-en>EN</span>
+        </button>
+        <button class="hamburger" aria-label="Menu" data-i18n-aria="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <div class="nav-overlay"></div>
   <nav class="nav-mobile">
     <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="desporto.html">Desporto</a></li>
-      <li><a href="aluguer.html">Aluguer</a></li>
-      <li><a href="alojamento.html">Alojamento</a></li>
-      <li><a href="eventos.html">Eventos</a></li>
-      <li><a href="espacos.html">Espaços</a></li>
-      <li><a href="inscricao.html" class="active">Inscrição</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="index.html" data-i18n="Início">Início</a></li>
+      <li><a href="desporto.html" data-i18n="Desporto">Desporto</a></li>
+      <li><a href="aluguer.html" data-i18n="Aluguer">Aluguer</a></li>
+      <li><a href="alojamento.html" data-i18n="Alojamento">Alojamento</a></li>
+      <li><a href="eventos.html" data-i18n="Eventos">Eventos</a></li>
+      <li><a href="espacos.html" data-i18n="Espaços">Espaços</a></li>
+      <li><a href="inscricao.html" class="active" data-i18n="Inscrição">Inscrição</a></li>
+      <li><a href="contacto.html" data-i18n="Contacto">Contacto</a></li>
     </ul>
   </nav>
 
   <section class="page-hero page-hero--media" style="background-image: url('images/inscricao-hero.jpg');">
     <div class="container">
-      <p class="uppercase section-subtitle">Atletas</p>
-      <h1>Inscrição em aulas e escolinhas</h1>
-      <p>Preencha o formulário. A mensagem será enviada para o WhatsApp do Decifer para confirmarmos a sua inscrição.</p>
+      <p class="uppercase section-subtitle" data-i18n="Atletas">Atletas</p>
+      <h1 data-i18n="Inscrição em aulas e escolinhas">Inscrição em aulas e escolinhas</h1>
+      <p data-i18n="Preencha o formulário. A mensagem será enviada para o WhatsApp do Decifer para confirmarmos a sua inscrição.">Preencha o formulário. A mensagem será enviada para o WhatsApp do Decifer para confirmarmos a sua inscrição.</p>
     </div>
   </section>
 
@@ -67,68 +74,68 @@
     <div class="container" style="max-width: 640px;">
       <form class="form-whatsapp" data-form-type="Inscrição — Aulas / Escolinhas">
         <div class="form-group">
-          <label for="modalidade">Modalidade</label>
+          <label for="modalidade" data-i18n="Modalidade">Modalidade</label>
           <select id="modalidade" name="modalidade" data-label="Modalidade" required>
-            <option value="">Seleccione</option>
-            <option value="Futebol (Escolinha)">Futebol (Escolinha)</option>
-            <option value="Natação">Natação</option>
-            <option value="Padel (Aulas)">Padel (Aulas)</option>
-            <option value="Jiu-Jitsu">Jiu-Jitsu</option>
-            <option value="Sócio Natação (Treino livre)">Sócio Natação (Treino livre)</option>
+            <option value="" data-i18n="Seleccione">Seleccione</option>
+            <option value="Futebol (Escolinha)" data-i18n="Futebol (Escolinha)">Futebol (Escolinha)</option>
+            <option value="Natação" data-i18n="Natação">Natação</option>
+            <option value="Padel (Aulas)" data-i18n="Padel (Aulas)">Padel (Aulas)</option>
+            <option value="Jiu-Jitsu" data-i18n="Jiu-Jitsu">Jiu-Jitsu</option>
+            <option value="Sócio Natação (Treino livre)" data-i18n="Sócio Natação (Treino livre)">Sócio Natação (Treino livre)</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="aluno">Nome do aluno</label>
-          <input type="text" id="aluno" name="aluno" data-label="Nome do aluno" required placeholder="Nome completo">
+          <label for="aluno" data-i18n="Nome do aluno">Nome do aluno</label>
+          <input type="text" id="aluno" name="aluno" data-label="Nome do aluno" required placeholder="Nome completo data-i18n-placeholder="Nome completo">>
         </div>
 
         <div class="form-group">
-          <label for="idade">Idade do aluno</label>
-          <input type="number" id="idade" name="idade" data-label="Idade" required min="4" max="99" placeholder="Ex: 12">
+          <label for="idade" data-i18n="Idade do aluno">Idade do aluno</label>
+          <input type="number" id="idade" name="idade" data-label="Idade" required min="4" max="99" placeholder="Ex: 12 data-i18n-placeholder="Ex: 12">>
         </div>
 
         <div class="form-group">
-          <label for="encarregado">Nome do encarregado</label>
-          <input type="text" id="encarregado" name="encarregado" data-label="Encarregado" placeholder="Se aplicável">
+          <label for="encarregado" data-i18n="Nome do encarregado">Nome do encarregado</label>
+          <input type="text" id="encarregado" name="encarregado" data-label="Encarregado" placeholder="Se aplicável data-i18n-placeholder="Se aplicável">>
         </div>
 
         <div class="form-group">
-          <label for="telefone">Telefone / WhatsApp</label>
-          <input type="tel" id="telefone" name="telefone" data-label="Telefone" required placeholder="+244...">
+          <label for="telefone" data-i18n="Telefone / WhatsApp">Telefone / WhatsApp</label>
+          <input type="tel" id="telefone" name="telefone" data-label="Telefone" required placeholder="+244... data-i18n-placeholder="+244...">>
         </div>
 
         <div class="form-group">
-          <label for="horario">Preferência de horário</label>
-          <input type="text" id="horario" name="horario" data-label="Horário preferido" placeholder="Ex: 3ª e 5ª, 17h–18h">
+          <label for="horario" data-i18n="Preferência de horário">Preferência de horário</label>
+          <input type="text" id="horario" name="horario" data-label="Horário preferido" placeholder="Ex: 3ª e 5ª, 17h–18h data-i18n-placeholder="Ex: 3ª e 5ª, 17h–18h">>
         </div>
 
         <div class="form-group">
-          <label for="notas">Observações</label>
-          <textarea id="notas" name="notas" data-label="Observações" placeholder="Informação adicional (opcional)"></textarea>
+          <label for="notas" data-i18n="Observações">Observações</label>
+          <textarea id="notas" name="notas" data-label="Observações" placeholder="Informação adicional (opcional) data-i18n-placeholder="Informação adicional (opcional)">></textarea>
         </div>
 
-        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1.25rem;">
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1.25rem;" data-i18n="Ao enviar, abre-se o WhatsApp com a mensagem pronta. Documentação (BI, fotos, avaliação médica) será indicada na resposta.">
           Ao enviar, abre-se o WhatsApp com a mensagem pronta. Documentação (BI, fotos, avaliação médica) será indicada na resposta.
         </p>
 
-        <button type="submit" class="btn btn-accent">Enviar via WhatsApp</button>
+        <button type="submit" class="btn btn-accent" data-i18n="Enviar via WhatsApp">Enviar via WhatsApp</button>
       </form>
 
 
       <div style="margin-top: 2.5rem; padding: 1.75rem; border: 1px solid var(--color-border);">
-        <p style="font-weight: 500; margin-bottom: 0.75rem;">Documentação necessária (todas as modalidades)</p>
+        <p style="font-weight: 500; margin-bottom: 0.75rem;" data-i18n="Documentação necessária (todas as modalidades)">Documentação necessária (todas as modalidades)</p>
         <ul style="font-size: 0.95rem; color: var(--color-text-muted); padding-left: 1.1rem; margin-bottom: 1.25rem;">
-          <li>2 fotografias</li>
-          <li>1 cópia do BI do aluno</li>
-          <li>1 cópia do BI do encarregado (quando aplicável)</li>
-          <li>Avaliação Médica Desportiva (10.000 Kz)</li>
+          <li data-i18n="2 fotografias">2 fotografias</li>
+          <li data-i18n="1 cópia do BI do aluno">1 cópia do BI do aluno</li>
+          <li data-i18n="1 cópia do BI do encarregado (quando aplicável)">1 cópia do BI do encarregado (quando aplicável)</li>
+          <li data-i18n="Avaliação Médica Desportiva (10.000 Kz)">Avaliação Médica Desportiva (10.000 Kz)</li>
         </ul>
-        <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;"><strong>Nota importante.</strong> Mensalidades de 1 a 10 de cada mês. Após o dia 10 aplica-se multa de 10%. Sem regularização até ao dia 30, o aluno fica impedido de treinar. Para trancar a modalidade, contacte-nos; caso contrário, os meses em dívida devem ser liquidados.</p>
+        <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;" data-i18n="<strong>Nota importante.</strong> Mensalidades de 1 a 10 de cada mês. Após o dia 10 aplica-se multa de 10%. Sem regularização até ao dia 30, o aluno fica impedido de treinar. Para trancar a modalidade, contacte-nos; caso contrário, os meses em dívida devem ser liquidados." data-i18n-html="1"><strong>Nota importante.</strong> Mensalidades de 1 a 10 de cada mês. Após o dia 10 aplica-se multa de 10%. Sem regularização até ao dia 30, o aluno fica impedido de treinar. Para trancar a modalidade, contacte-nos; caso contrário, os meses em dívida devem ser liquidados.</p>
       </div>
 
       <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--color-text-muted);">
-        Também pode contactar directamente: <a href="tel:+244936724676">936 724 676</a>
+        <span data-i18n="Também pode contactar directamente:">Também pode contactar directamente:</span> <a href="tel:+244936724676">936 724 676</a>
         · Padel: <a href="tel:+244929797204">929 797 204</a>
       </p>
     </div>
@@ -142,37 +149,38 @@
             <img loading="eager" decoding="async" src="images/logo.jpg" alt="Decifer Sport Resort" width="32" height="32">
             <span>Decifer Sport Resort</span>
           </div>
-          <p style="font-size: 0.9rem; max-width: 28ch;">Resort desportivo com padel, futebol, natação, 32 suítes e espaços para eventos.</p>
+          <p style="font-size: 0.9rem; max-width: 28ch;" data-i18n="Resort desportivo com padel, futebol, natação, 32 suítes e espaços para eventos.">Resort desportivo com padel, futebol, natação, 32 suítes e espaços para eventos.</p>
         </div>
         <div>
-          <h4>Navegação</h4>
-          <a href="desporto.html">Desporto</a>
-          <a href="aluguer.html">Aluguer</a>
-          <a href="alojamento.html">Alojamento</a>
-          <a href="eventos.html">Eventos</a>
-          <a href="espacos.html">Espaços</a>
-          <a href="inscricao.html">Inscrição</a>
+          <h4 data-i18n="Navegação">Navegação</h4>
+          <a href="desporto.html" data-i18n="Desporto">Desporto</a>
+          <a href="aluguer.html" data-i18n="Aluguer">Aluguer</a>
+          <a href="alojamento.html" data-i18n="Alojamento">Alojamento</a>
+          <a href="eventos.html" data-i18n="Eventos">Eventos</a>
+          <a href="espacos.html" data-i18n="Espaços">Espaços</a>
+          <a href="inscricao.html" data-i18n="Inscrição">Inscrição</a>
         </div>
         <div>
-          <h4>Contacto</h4>
+          <h4 data-i18n="Contacto">Contacto</h4>
           <a href="tel:+244936724676">+244 936 724 676</a>
           <a href="mailto:reservas@decifersportresort.co.ao">reservas@decifersportresort.co.ao</a>
-          <a href="https://wa.me/244936724676" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://www.instagram.com/decifersportresort/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.facebook.com/decifersportresortcoque" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://wa.me/244936724676" target="_blank" rel="noopener" data-i18n="WhatsApp">WhatsApp</a>
+          <a href="https://www.instagram.com/decifersportresort/" target="_blank" rel="noopener" data-i18n="Instagram">Instagram</a>
+          <a href="https://www.facebook.com/decifersportresortcoque" target="_blank" rel="noopener" data-i18n="Facebook">Facebook</a>
         </div>
         <div>
-          <h4>Morada</h4>
+          <h4 data-i18n="Morada">Morada</h4>
           <p style="font-size: 0.9rem;">Rua do Centro de Distribuição da EPAL<br>Benfica II, Lar do Patriota</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Decifer Sport Resort. Todos os direitos reservados.</span>
-        <span>Benfica II, Lar do Patriota</span>
+        <span data-i18n="© 2026 Decifer Sport Resort. Todos os direitos reservados.">© 2026 Decifer Sport Resort. Todos os direitos reservados.</span>
+        <span data-i18n="Benfica II, Lar do Patriota">Benfica II, Lar do Patriota</span>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desporto | Decifer Sport Resort</title>
+  <title data-i18n-title="Desporto | Decifer Sport Resort">Desporto | Decifer Sport Resort</title>
   <meta name="description" content="Escolinhas de Futebol, Natação, Padel e Jiu-Jitsu no Decifer Sport Resort. Preços, horários e inscrição.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,43 +23,50 @@
       </a>
       <nav class="nav-desktop">
         <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="desporto.html" class="active">Desporto</a></li>
-          <li><a href="aluguer.html">Aluguer</a></li>
-          <li><a href="alojamento.html">Alojamento</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="espacos.html">Espaços</a></li>
-          <li><a href="inscricao.html">Inscrição</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="index.html" data-i18n="Início">Início</a></li>
+          <li><a href="desporto.html" class="active" data-i18n="Desporto">Desporto</a></li>
+          <li><a href="aluguer.html" data-i18n="Aluguer">Aluguer</a></li>
+          <li><a href="alojamento.html" data-i18n="Alojamento">Alojamento</a></li>
+          <li><a href="eventos.html" data-i18n="Eventos">Eventos</a></li>
+          <li><a href="espacos.html" data-i18n="Espaços">Espaços</a></li>
+          <li><a href="inscricao.html" data-i18n="Inscrição">Inscrição</a></li>
+          <li><a href="contacto.html" data-i18n="Contacto">Contacto</a></li>
         </ul>
       </nav>
-      <button class="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header-actions">
+        <button type="button" class="lang-toggle" data-lang-toggle aria-label="Language" title="PT / EN">
+          <span data-lang-pt class="is-active">PT</span>
+          <span class="lang-toggle__sep">/</span>
+          <span data-lang-en>EN</span>
+        </button>
+        <button class="hamburger" aria-label="Menu" data-i18n-aria="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <div class="nav-overlay"></div>
   <nav class="nav-mobile">
     <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="desporto.html" class="active">Desporto</a></li>
-      <li><a href="aluguer.html">Aluguer</a></li>
-      <li><a href="alojamento.html">Alojamento</a></li>
-      <li><a href="eventos.html">Eventos</a></li>
-      <li><a href="espacos.html">Espaços</a></li>
-      <li><a href="inscricao.html">Inscrição</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="index.html" data-i18n="Início">Início</a></li>
+      <li><a href="desporto.html" class="active" data-i18n="Desporto">Desporto</a></li>
+      <li><a href="aluguer.html" data-i18n="Aluguer">Aluguer</a></li>
+      <li><a href="alojamento.html" data-i18n="Alojamento">Alojamento</a></li>
+      <li><a href="eventos.html" data-i18n="Eventos">Eventos</a></li>
+      <li><a href="espacos.html" data-i18n="Espaços">Espaços</a></li>
+      <li><a href="inscricao.html" data-i18n="Inscrição">Inscrição</a></li>
+      <li><a href="contacto.html" data-i18n="Contacto">Contacto</a></li>
     </ul>
   </nav>
 
   <section class="page-hero page-hero--media page-hero--faces" style="background-image: url('images/desporto-hero.jpg');">
     <div class="container">
-      <p class="uppercase section-subtitle">Formação</p>
-      <h1>Aulas e escolinhas</h1>
-      <p>Futebol, natação, padel, jiu-jitsu e sócio de natação — preços, horários e inscrição.</p>
+      <p class="uppercase section-subtitle" data-i18n="Formação">Formação</p>
+      <h1 data-i18n="Aulas e escolinhas">Aulas e escolinhas</h1>
+      <p data-i18n="Futebol, natação, padel, jiu-jitsu e sócio de natação — preços, horários e inscrição.">Futebol, natação, padel, jiu-jitsu e sócio de natação — preços, horários e inscrição.</p>
     </div>
   </section>
 
@@ -67,10 +74,10 @@
   <section class="section">
     <div class="container">
       <div class="text-center mb-4">
-        <p class="uppercase section-subtitle">Formação</p>
-        <h2 class="section-title">Aulas / Escolinhas</h2>
-        <p style="margin: 0 auto 1.25rem; max-width: 560px;">Inscrições abertas. Documentação e avaliação médica desportiva necessárias para todas as modalidades.</p>
-        <a href="inscricao.html" class="btn">Formulário de inscrição</a>
+        <p class="uppercase section-subtitle" data-i18n="Formação">Formação</p>
+        <h2 class="section-title" data-i18n="Aulas / Escolinhas">Aulas / Escolinhas</h2>
+        <p style="margin: 0 auto 1.25rem; max-width: 560px;" data-i18n="Inscrições abertas. Documentação e avaliação médica desportiva necessárias para todas as modalidades.">Inscrições abertas. Documentação e avaliação médica desportiva necessárias para todas as modalidades.</p>
+        <a href="inscricao.html" class="btn" data-i18n="Formulário de inscrição">Formulário de inscrição</a>
       </div>
 
 
@@ -82,31 +89,31 @@
           <img loading="lazy" decoding="async" src="images/class-futebol.jpg" alt="Escolinha de Futebol" width="1200" height="675" style="object-position: center 40%;">
         </div>
         <div class="class-card__body">
-          <span class="class-card__label">Escolinha</span>
-          <h3 class="class-card__title">Futebol</h3>
-          <p class="class-card__meta">Dos 4 aos 19 anos</p>
+          <span class="class-card__label" data-i18n="Escolinha">Escolinha</span>
+          <h3 class="class-card__title" data-i18n="Futebol">Futebol</h3>
+          <p class="class-card__meta" data-i18n="Dos 4 aos 19 anos">Dos 4 aos 19 anos</p>
           <div class="class-card__cols">
             <div>
-              <p class="class-card__section-title">Preços</p>
+              <p class="class-card__section-title" data-i18n="Preços">Preços</p>
               <ul class="price-rows">
-                <li><span class="price-label">Inscrição</span><span class="price-value">10.000 Kz</span></li>
-                <li><span class="price-label">Reinscrição</span><span class="price-value">5.000 Kz</span></li>
-                <li><span class="price-label">Mensalidade</span><span class="price-value">25.000 Kz</span></li>
-                <li><span class="price-label">Kit de treino</span><span class="price-value">45.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Inscrição">Inscrição</span><span class="price-value">10.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Reinscrição">Reinscrição</span><span class="price-value">5.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Mensalidade">Mensalidade</span><span class="price-value">25.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Kit de treino">Kit de treino</span><span class="price-value">45.000 Kz</span></li>
               </ul>
             </div>
             <div>
-              <p class="class-card__section-title">Horários</p>
-              <p class="class-card__hours">2ª e 5ª ou 3ª e 6ª feira</p>
+              <p class="class-card__section-title" data-i18n="Horários">Horários</p>
+              <p class="class-card__hours" data-i18n="2ª e 5ª ou 3ª e 6ª feira">2ª e 5ª ou 3ª e 6ª feira</p>
               <ul>
-                <li>04–12 anos: 17h–18h ou 18h–19h</li>
-                <li>13–15 anos: 19h–20h</li>
-                <li>16–19 anos: 20h–21h</li>
+                <li data-i18n="04–12 anos: 17h–18h ou 18h–19h">04–12 anos: 17h–18h ou 18h–19h</li>
+                <li data-i18n="13–15 anos: 19h–20h">13–15 anos: 19h–20h</li>
+                <li data-i18n="16–19 anos: 20h–21h">16–19 anos: 20h–21h</li>
               </ul>
             </div>
           </div>
           <div class="class-card__action">
-            <a href="inscricao.html" class="btn btn-sm">Inscrever</a>
+            <a href="inscricao.html" class="btn btn-sm" data-i18n="Inscrever">Inscrever</a>
           </div>
         </div>
       </article>
@@ -117,29 +124,29 @@
           <img loading="lazy" decoding="async" src="images/class-natacao.jpg" alt="Aulas de Natação" width="1200" height="675" style="object-position: center 30%;">
         </div>
         <div class="class-card__body">
-          <span class="class-card__label">Aulas</span>
-          <h3 class="class-card__title">Natação</h3>
-          <p class="class-card__meta">Dos 4 anos à idade adulta · 1 hora de aula</p>
+          <span class="class-card__label" data-i18n="Aulas">Aulas</span>
+          <h3 class="class-card__title" data-i18n="Natação">Natação</h3>
+          <p class="class-card__meta" data-i18n="Dos 4 anos à idade adulta · 1 hora de aula">Dos 4 anos à idade adulta · 1 hora de aula</p>
           <div class="class-card__cols">
             <div>
-              <p class="class-card__section-title">Preços</p>
+              <p class="class-card__section-title" data-i18n="Preços">Preços</p>
               <ul class="price-rows">
-                <li><span class="price-label">Inscrição</span><span class="price-value">10.000 Kz</span></li>
-                <li><span class="price-label">Reinscrição</span><span class="price-value">5.000 Kz</span></li>
-                <li><span class="price-label">1x por semana</span><span class="price-value">15.000 Kz</span></li>
-                <li><span class="price-label">2x por semana</span><span class="price-value">20.000 Kz</span></li>
-                <li><span class="price-label">3x por semana</span><span class="price-value">25.000 Kz</span></li>
-                <li><span class="price-label">5x por semana</span><span class="price-value">35.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Inscrição">Inscrição</span><span class="price-value">10.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Reinscrição">Reinscrição</span><span class="price-value">5.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="1x por semana">1x por semana</span><span class="price-value">15.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="2x por semana">2x por semana</span><span class="price-value">20.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="3x por semana">3x por semana</span><span class="price-value">25.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="5x por semana">5x por semana</span><span class="price-value">35.000 Kz</span></li>
               </ul>
-              <div class="class-card__equip">Material: Touca 12.000 · Óculos 10.000 · Fato de banho 15.000 · Calções 12.000 Kz</div>
+              <div class="class-card__equip" data-i18n="Material: Touca 12.000 · Óculos 10.000 · Fato de banho 15.000 · Calções 12.000 Kz">Material: Touca 12.000 · Óculos 10.000 · Fato de banho 15.000 · Calções 12.000 Kz</div>
             </div>
             <div>
-              <p class="class-card__section-title">Horários</p>
-              <p class="class-card__hours">2ª a 6ª feira: 08:00–21:00<br>Sábado: 08:00–12:00</p>
+              <p class="class-card__section-title" data-i18n="Horários">Horários</p>
+              <p class="class-card__hours" data-i18n="2ª a 6ª feira: 08:00–21:00<br>Sábado: 08:00–12:00" data-i18n-html="1">2ª a 6ª feira: 08:00–21:00<br>Sábado: 08:00–12:00</p>
             </div>
           </div>
           <div class="class-card__action">
-            <a href="inscricao.html" class="btn btn-sm">Inscrever</a>
+            <a href="inscricao.html" class="btn btn-sm" data-i18n="Inscrever">Inscrever</a>
           </div>
         </div>
       </article>
@@ -150,30 +157,30 @@
           <img loading="lazy" decoding="async" src="images/class-padel.jpg" alt="Aulas de Padel" width="1200" height="675" style="object-position: center 35%;">
         </div>
         <div class="class-card__body">
-          <span class="class-card__label">Aulas</span>
-          <h3 class="class-card__title">Padel</h3>
-          <p class="class-card__meta">Dos 5 anos à idade adulta · 1 hora de aula</p>
+          <span class="class-card__label" data-i18n="Aulas">Aulas</span>
+          <h3 class="class-card__title" data-i18n="Padel">Padel</h3>
+          <p class="class-card__meta" data-i18n="Dos 5 anos à idade adulta · 1 hora de aula">Dos 5 anos à idade adulta · 1 hora de aula</p>
           <div class="class-card__cols">
             <div>
-              <p class="class-card__section-title">Preços</p>
+              <p class="class-card__section-title" data-i18n="Preços">Preços</p>
               <ul class="price-rows">
-                <li><span class="price-label">Aula individual avulsa</span><span class="price-value">28.000 Kz</span></li>
-                <li><span class="price-label">Individual 1x/semana</span><span class="price-value">80.000 Kz</span></li>
-                <li><span class="price-label">Individual 2x/semana</span><span class="price-value">145.000 Kz</span></li>
-                <li><span class="price-label">2 pessoas 1x/semana</span><span class="price-value">58.000 Kz</span></li>
-                <li><span class="price-label">2 pessoas 2x/semana</span><span class="price-value">106.000 Kz</span></li>
-                <li><span class="price-label">4 pessoas 1x/semana</span><span class="price-value">48.000 Kz</span></li>
-                <li><span class="price-label">4 pessoas 2x/semana</span><span class="price-value">80.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Aula individual avulsa">Aula individual avulsa</span><span class="price-value">28.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Individual 1x/semana">Individual 1x/semana</span><span class="price-value">80.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Individual 2x/semana">Individual 2x/semana</span><span class="price-value">145.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="2 pessoas 1x/semana">2 pessoas 1x/semana</span><span class="price-value">58.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="2 pessoas 2x/semana">2 pessoas 2x/semana</span><span class="price-value">106.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="4 pessoas 1x/semana">4 pessoas 1x/semana</span><span class="price-value">48.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="4 pessoas 2x/semana">4 pessoas 2x/semana</span><span class="price-value">80.000 Kz</span></li>
               </ul>
             </div>
             <div>
-              <p class="class-card__section-title">Horários</p>
-              <p class="class-card__hours">3ª e 5ª feira: 17:00–21:00<br>Sábado: 08:00–12:00</p>
-              <p class="class-card__hours" style="margin-top: 0.75rem;">Reservas: <a href="tel:+244929797204">929 797 204</a></p>
+              <p class="class-card__section-title" data-i18n="Horários">Horários</p>
+              <p class="class-card__hours" data-i18n="3ª e 5ª feira: 17:00–21:00<br>Sábado: 08:00–12:00" data-i18n-html="1">3ª e 5ª feira: 17:00–21:00<br>Sábado: 08:00–12:00</p>
+              <p class="class-card__hours" style="margin-top: 0.75rem;"><span data-i18n="Reservas:">Reservas:</span> <a href="tel:+244929797204">929 797 204</a></p>
             </div>
           </div>
           <div class="class-card__action">
-            <a href="inscricao.html" class="btn btn-sm">Inscrever</a>
+            <a href="inscricao.html" class="btn btn-sm" data-i18n="Inscrever">Inscrever</a>
           </div>
         </div>
       </article>
@@ -184,25 +191,25 @@
           <img loading="lazy" decoding="async" src="images/class-jiujitsu.jpg" alt="Aulas de Jiu-Jitsu" width="1200" height="675" style="object-position: center center;">
         </div>
         <div class="class-card__body">
-          <span class="class-card__label">Aulas</span>
-          <h3 class="class-card__title">Jiu-Jitsu</h3>
-          <p class="class-card__meta">Dos 5 anos à idade adulta</p>
+          <span class="class-card__label" data-i18n="Aulas">Aulas</span>
+          <h3 class="class-card__title" data-i18n="Jiu-Jitsu">Jiu-Jitsu</h3>
+          <p class="class-card__meta" data-i18n="Dos 5 anos à idade adulta">Dos 5 anos à idade adulta</p>
           <div class="class-card__cols">
             <div>
-              <p class="class-card__section-title">Preços</p>
+              <p class="class-card__section-title" data-i18n="Preços">Preços</p>
               <ul class="price-rows">
-                <li><span class="price-label">Inscrição</span><span class="price-value">10.000 Kz</span></li>
-                <li><span class="price-label">Reinscrição</span><span class="price-value">5.000 Kz</span></li>
-                <li><span class="price-label">Mensalidade</span><span class="price-value">30.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Inscrição">Inscrição</span><span class="price-value">10.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Reinscrição">Reinscrição</span><span class="price-value">5.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Mensalidade">Mensalidade</span><span class="price-value">30.000 Kz</span></li>
               </ul>
             </div>
             <div>
-              <p class="class-card__section-title">Horários</p>
-              <p class="class-card__hours">3ª, 5ª feira e Sábado<br>17:00–20:00</p>
+              <p class="class-card__section-title" data-i18n="Horários">Horários</p>
+              <p class="class-card__hours" data-i18n="3ª, 5ª feira e Sábado<br>17:00–20:00" data-i18n-html="1">3ª, 5ª feira e Sábado<br>17:00–20:00</p>
             </div>
           </div>
           <div class="class-card__action">
-            <a href="inscricao.html" class="btn btn-sm">Inscrever</a>
+            <a href="inscricao.html" class="btn btn-sm" data-i18n="Inscrever">Inscrever</a>
           </div>
         </div>
       </article>
@@ -213,25 +220,25 @@
           <img loading="lazy" decoding="async" src="images/class-socio-natacao.jpg" alt="Sócio Natação — treino livre" width="1200" height="675">
         </div>
         <div class="class-card__body">
-          <span class="class-card__label">Sócio</span>
-          <h3 class="class-card__title">Natação — Treino livre</h3>
-          <p class="class-card__meta">Acesso para treino livre na piscina</p>
+          <span class="class-card__label" data-i18n="Sócio">Sócio</span>
+          <h3 class="class-card__title" data-i18n="Natação — Treino livre">Natação — Treino livre</h3>
+          <p class="class-card__meta" data-i18n="Acesso para treino livre na piscina">Acesso para treino livre na piscina</p>
           <div class="class-card__cols">
             <div>
-              <p class="class-card__section-title">Preços</p>
+              <p class="class-card__section-title" data-i18n="Preços">Preços</p>
               <ul class="price-rows">
-                <li><span class="price-label">Inscrição</span><span class="price-value">10.000 Kz</span></li>
-                <li><span class="price-label">Reinscrição</span><span class="price-value">5.000 Kz</span></li>
-                <li><span class="price-label">Mensalidade</span><span class="price-value">40.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Inscrição">Inscrição</span><span class="price-value">10.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Reinscrição">Reinscrição</span><span class="price-value">5.000 Kz</span></li>
+                <li><span class="price-label" data-i18n="Mensalidade">Mensalidade</span><span class="price-value">40.000 Kz</span></li>
               </ul>
             </div>
             <div>
-              <p class="class-card__section-title">Horários</p>
-              <p class="class-card__hours">2ª a 6ª feira<br>Horário indefinido</p>
+              <p class="class-card__section-title" data-i18n="Horários">Horários</p>
+              <p class="class-card__hours" data-i18n="2ª a 6ª feira<br>Horário indefinido" data-i18n-html="1">2ª a 6ª feira<br>Horário indefinido</p>
             </div>
           </div>
           <div class="class-card__action">
-            <a href="inscricao.html" class="btn btn-sm">Inscrever</a>
+            <a href="inscricao.html" class="btn btn-sm" data-i18n="Inscrever">Inscrever</a>
           </div>
         </div>
       </article>
@@ -240,14 +247,14 @@
 
       <!-- Documentação -->
       <div class="class-doc-box">
-        <p style="font-weight: 500; margin-bottom: 0.75rem;">Documentação necessária (todas as modalidades)</p>
+        <p style="font-weight: 500; margin-bottom: 0.75rem;" data-i18n="Documentação necessária (todas as modalidades)">Documentação necessária (todas as modalidades)</p>
         <ul style="font-size: 0.95rem; color: var(--color-text-muted); padding-left: 1.1rem; margin-bottom: 1.25rem;">
-          <li>2 fotografias</li>
-          <li>1 cópia do BI do aluno</li>
-          <li>1 cópia do BI do encarregado (quando aplicável)</li>
-          <li>Avaliação Médica Desportiva (10.000 Kz)</li>
+          <li data-i18n="2 fotografias">2 fotografias</li>
+          <li data-i18n="1 cópia do BI do aluno">1 cópia do BI do aluno</li>
+          <li data-i18n="1 cópia do BI do encarregado (quando aplicável)">1 cópia do BI do encarregado (quando aplicável)</li>
+          <li data-i18n="Avaliação Médica Desportiva (10.000 Kz)">Avaliação Médica Desportiva (10.000 Kz)</li>
         </ul>
-        <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;"><strong>Nota importante.</strong> Mensalidades de 1 a 10 de cada mês. Após o dia 10 aplica-se multa de 10%. Sem regularização até ao dia 30, o aluno fica impedido de treinar. Para trancar a modalidade, contacte-nos; caso contrário, os meses em dívida devem ser liquidados.</p>
+        <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;" data-i18n="<strong>Nota importante.</strong> Mensalidades de 1 a 10 de cada mês. Após o dia 10 aplica-se multa de 10%. Sem regularização até ao dia 30, o aluno fica impedido de treinar. Para trancar a modalidade, contacte-nos; caso contrário, os meses em dívida devem ser liquidados." data-i18n-html="1"><strong>Nota importante.</strong> Mensalidades de 1 a 10 de cada mês. Após o dia 10 aplica-se multa de 10%. Sem regularização até ao dia 30, o aluno fica impedido de treinar. Para trancar a modalidade, contacte-nos; caso contrário, os meses em dívida devem ser liquidados.</p>
       </div>
     </div>
   </section>
@@ -256,10 +263,10 @@
     <img class="cta-band__media" loading="lazy" decoding="async" src="images/desporto-cta.jpg" alt="" width="1920" height="800">
     <div class="cta-band-overlay"></div>
     <div class="container text-center" style="position: relative; z-index: 1;">
-      <p class="uppercase" style="color: rgba(255,255,255,0.65); margin-bottom: 0.75rem; letter-spacing: 0.1em; font-size: 0.8rem;">Aluguer</p>
-      <h2 style="color: white; margin-bottom: 1rem;">Quer alugar campo, padel ou piscina?</h2>
-      <p style="color: rgba(255,255,255,0.8); margin: 0 auto 2rem; max-width: 36ch;">Reservas avulsas têm página e formulário próprios.</p>
-      <a href="aluguer.html" class="btn btn-accent">Ver aluguer</a>
+      <p class="uppercase" style="color: rgba(255,255,255,0.65); margin-bottom: 0.75rem; letter-spacing: 0.1em; font-size: 0.8rem;" data-i18n="Aluguer">Aluguer</p>
+      <h2 style="color: white; margin-bottom: 1rem;" data-i18n="Quer alugar campo, padel ou piscina?">Quer alugar campo, padel ou piscina?</h2>
+      <p style="color: rgba(255,255,255,0.8); margin: 0 auto 2rem; max-width: 36ch;" data-i18n="Reservas avulsas têm página e formulário próprios.">Reservas avulsas têm página e formulário próprios.</p>
+      <a href="aluguer.html" class="btn btn-accent" data-i18n="Ver aluguer">Ver aluguer</a>
     </div>
   </section>
 
@@ -271,37 +278,38 @@
             <img loading="eager" decoding="async" src="images/logo.jpg" alt="Decifer Sport Resort" width="32" height="32">
             <span>Decifer Sport Resort</span>
           </div>
-          <p style="font-size: 0.9rem; max-width: 28ch;">Resort desportivo com padel, futebol, natação, 32 suítes e espaços para eventos.</p>
+          <p style="font-size: 0.9rem; max-width: 28ch;" data-i18n="Resort desportivo com padel, futebol, natação, 32 suítes e espaços para eventos.">Resort desportivo com padel, futebol, natação, 32 suítes e espaços para eventos.</p>
         </div>
         <div>
-          <h4>Navegação</h4>
-          <a href="desporto.html">Desporto</a>
-          <a href="aluguer.html">Aluguer</a>
-          <a href="alojamento.html">Alojamento</a>
-          <a href="eventos.html">Eventos</a>
-          <a href="espacos.html">Espaços</a>
-          <a href="inscricao.html">Inscrição</a>
+          <h4 data-i18n="Navegação">Navegação</h4>
+          <a href="desporto.html" data-i18n="Desporto">Desporto</a>
+          <a href="aluguer.html" data-i18n="Aluguer">Aluguer</a>
+          <a href="alojamento.html" data-i18n="Alojamento">Alojamento</a>
+          <a href="eventos.html" data-i18n="Eventos">Eventos</a>
+          <a href="espacos.html" data-i18n="Espaços">Espaços</a>
+          <a href="inscricao.html" data-i18n="Inscrição">Inscrição</a>
         </div>
         <div>
-          <h4>Contacto</h4>
+          <h4 data-i18n="Contacto">Contacto</h4>
           <a href="tel:+244936724676">+244 936 724 676</a>
           <a href="mailto:reservas@decifersportresort.co.ao">reservas@decifersportresort.co.ao</a>
-          <a href="https://wa.me/244936724676" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://www.instagram.com/decifersportresort/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.facebook.com/decifersportresortcoque" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://wa.me/244936724676" target="_blank" rel="noopener" data-i18n="WhatsApp">WhatsApp</a>
+          <a href="https://www.instagram.com/decifersportresort/" target="_blank" rel="noopener" data-i18n="Instagram">Instagram</a>
+          <a href="https://www.facebook.com/decifersportresortcoque" target="_blank" rel="noopener" data-i18n="Facebook">Facebook</a>
         </div>
         <div>
-          <h4>Morada</h4>
+          <h4 data-i18n="Morada">Morada</h4>
           <p style="font-size: 0.9rem;">Rua do Centro de Distribuição da EPAL<br>Benfica II, Lar do Patriota</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Decifer Sport Resort. Todos os direitos reservados.</span>
-        <span>Benfica II, Lar do Patriota</span>
+        <span data-i18n="© 2026 Decifer Sport Resort. Todos os direitos reservados.">© 2026 Decifer Sport Resort. Todos os direitos reservados.</span>
+        <span data-i18n="Benfica II, Lar do Patriota">Benfica II, Lar do Patriota</span>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

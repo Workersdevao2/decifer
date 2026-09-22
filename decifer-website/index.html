@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Decifer Sport Resort | Resort Desportivo de Excelência</title>
+  <title data-i18n-title="Decifer Sport Resort | Resort Desportivo de Excelência">Decifer Sport Resort | Resort Desportivo de Excelência</title>
   <meta name="description" content="Decifer Sport Resort — Padel, Futebol, Natação, Alojamento e Eventos. Um espaço premium para desporto, lazer e hospedagem.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,21 +24,28 @@
       </a>
       <nav class="nav-desktop">
         <ul>
-          <li><a href="index.html" class="active">Início</a></li>
-          <li><a href="desporto.html">Desporto</a></li>
-          <li><a href="aluguer.html">Aluguer</a></li>
-          <li><a href="alojamento.html">Alojamento</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="espacos.html">Espaços</a></li>
-          <li><a href="inscricao.html">Inscrição</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="index.html" class="active" data-i18n="Início">Início</a></li>
+          <li><a href="desporto.html" data-i18n="Desporto">Desporto</a></li>
+          <li><a href="aluguer.html" data-i18n="Aluguer">Aluguer</a></li>
+          <li><a href="alojamento.html" data-i18n="Alojamento">Alojamento</a></li>
+          <li><a href="eventos.html" data-i18n="Eventos">Eventos</a></li>
+          <li><a href="espacos.html" data-i18n="Espaços">Espaços</a></li>
+          <li><a href="inscricao.html" data-i18n="Inscrição">Inscrição</a></li>
+          <li><a href="contacto.html" data-i18n="Contacto">Contacto</a></li>
         </ul>
       </nav>
-      <button class="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header-actions">
+        <button type="button" class="lang-toggle" data-lang-toggle aria-label="Language" title="PT / EN">
+          <span data-lang-pt class="is-active">PT</span>
+          <span class="lang-toggle__sep">/</span>
+          <span data-lang-en>EN</span>
+        </button>
+        <button class="hamburger" aria-label="Menu" data-i18n-aria="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -46,14 +53,14 @@
   <div class="nav-overlay"></div>
   <nav class="nav-mobile">
     <ul>
-      <li><a href="index.html" class="active">Início</a></li>
-      <li><a href="desporto.html">Desporto</a></li>
-      <li><a href="aluguer.html">Aluguer</a></li>
-      <li><a href="alojamento.html">Alojamento</a></li>
-      <li><a href="eventos.html">Eventos</a></li>
-      <li><a href="espacos.html">Espaços</a></li>
-      <li><a href="inscricao.html">Inscrição</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="index.html" class="active" data-i18n="Início">Início</a></li>
+      <li><a href="desporto.html" data-i18n="Desporto">Desporto</a></li>
+      <li><a href="aluguer.html" data-i18n="Aluguer">Aluguer</a></li>
+      <li><a href="alojamento.html" data-i18n="Alojamento">Alojamento</a></li>
+      <li><a href="eventos.html" data-i18n="Eventos">Eventos</a></li>
+      <li><a href="espacos.html" data-i18n="Espaços">Espaços</a></li>
+      <li><a href="inscricao.html" data-i18n="Inscrição">Inscrição</a></li>
+      <li><a href="contacto.html" data-i18n="Contacto">Contacto</a></li>
     </ul>
   </nav>
 
@@ -65,12 +72,12 @@
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="uppercase" style="color: rgba(255,255,255,0.7); margin-bottom: 0.75rem;">Resort Desportivo</p>
-      <h1>Excelência em desporto, lazer e hospitalidade</h1>
-      <p>Padel, futebol, natação, alojamento e eventos num ambiente contemporâneo e cuidadosamente projetado.</p>
+      <p class="uppercase" style="color: rgba(255,255,255,0.7); margin-bottom: 0.75rem;" data-i18n="Resort Desportivo">Resort Desportivo</p>
+      <h1 data-i18n="Excelência em desporto, lazer e hospitalidade">Excelência em desporto, lazer e hospitalidade</h1>
+      <p data-i18n="Padel, futebol, natação, alojamento e eventos num ambiente contemporâneo e cuidadosamente projetado.">Padel, futebol, natação, alojamento e eventos num ambiente contemporâneo e cuidadosamente projetado.</p>
       <div class="hero-actions">
-        <a href="alojamento.html#reservar" class="btn btn-accent">Reservar</a>
-        <a href="desporto.html" class="btn btn-outline-light">Explorar Desporto</a>
+        <a href="alojamento.html#reservar" class="btn btn-accent" data-i18n="Reservar">Reservar</a>
+        <a href="desporto.html" class="btn btn-outline-light" data-i18n="Explorar Desporto">Explorar Desporto</a>
       </div>
     </div>
   </section>
@@ -79,23 +86,23 @@
   <div class="feature-strip">
     <a href="alojamento.html" class="feature-item" data-bg="images/feature-suites.jpg">
       <div class="number">32</div>
-      <h4>Suítes</h4>
-      <p>Com pequeno-almoço incluído</p>
+      <h4 data-i18n="Suítes">Suítes</h4>
+      <p data-i18n="Com pequeno-almoço incluído">Com pequeno-almoço incluído</p>
     </a>
     <a href="aluguer.html" class="feature-item" data-bg="images/feature-padel.jpg">
       <div class="number">Padel</div>
-      <h4>Quadras</h4>
-      <p>Aluguer e aulas disponíveis</p>
+      <h4 data-i18n="Quadras">Quadras</h4>
+      <p data-i18n="Aluguer e aulas disponíveis">Aluguer e aulas disponíveis</p>
     </a>
     <a href="aluguer.html" class="feature-item" data-bg="images/feature-campo.jpg">
-      <div class="number">Campo</div>
-      <h4>Relva sintética</h4>
-      <p>Completo e meio-campo</p>
+      <div class="number" data-i18n="Campo">Campo</div>
+      <h4 data-i18n="Relva sintética">Relva sintética</h4>
+      <p data-i18n="Completo e meio-campo">Completo e meio-campo</p>
     </a>
     <a href="desporto.html" class="feature-item" data-bg="images/feature-escolas.jpg">
-      <div class="number">Escolas</div>
-      <h4>Desportivas</h4>
-      <p>Futebol, natação, padel, jiu-jitsu</p>
+      <div class="number" data-i18n="Escolas">Escolas</div>
+      <h4 data-i18n="Desportivas">Desportivas</h4>
+      <p data-i18n="Futebol, natação, padel, jiu-jitsu">Futebol, natação, padel, jiu-jitsu</p>
     </a>
   </div>
 
@@ -103,9 +110,9 @@
   <section class="section">
     <div class="container">
       <div class="text-center" style="max-width: 720px; margin: 0 auto 3.5rem;">
-        <p class="uppercase section-subtitle">Bem-vindo</p>
-        <h2 class="section-title">Um destino completo para corpo e mente</h2>
-        <p>O Decifer Sport Resort combina instalações desportivas de referência com espaços de lazer, restauração e alojamento. Pensado para atletas, famílias e empresas que valorizam qualidade e detalhe.</p>
+        <p class="uppercase section-subtitle" data-i18n="Bem-vindo">Bem-vindo</p>
+        <h2 class="section-title" data-i18n="Um destino completo para corpo e mente">Um destino completo para corpo e mente</h2>
+        <p data-i18n="O Decifer Sport Resort combina instalações desportivas de referência com espaços de lazer, restauração e alojamento. Pensado para atletas, famílias e empresas que valorizam qualidade e detalhe.">O Decifer Sport Resort combina instalações desportivas de referência com espaços de lazer, restauração e alojamento. Pensado para atletas, famílias e empresas que valorizam qualidade e detalhe.</p>
       </div>
 
       <div class="cards-grid">
@@ -122,10 +129,10 @@
             <div class="card-slider__dots" data-slider-dots></div>
           </div>
           <div class="card-body">
-            <p class="card-meta">Desporto</p>
-            <h3>Padel & Futebol</h3>
-            <p>Courts de padel profissionais e campos de futebol com relvado sintético. Escola de futebol e treinos disponíveis.</p>
-            <a href="desporto.html" class="btn btn-sm">Saber mais</a>
+            <p class="card-meta" data-i18n="Desporto">Desporto</p>
+            <h3 data-i18n="Padel & Futebol">Padel & Futebol</h3>
+            <p data-i18n="Courts de padel profissionais e campos de futebol com relvado sintético. Escola de futebol e treinos disponíveis.">Courts de padel profissionais e campos de futebol com relvado sintético. Escola de futebol e treinos disponíveis.</p>
+            <a href="desporto.html" class="btn btn-sm" data-i18n="Saber mais">Saber mais</a>
           </div>
         </article>
 
@@ -133,7 +140,7 @@
           <div class="card-slider" data-slider data-autoplay="5000">
             <div class="card-slider__track">
               <div class="card-slider__slide is-active">
-                <img loading="lazy" decoding="async" src="images/card-piscinas.jpg" alt="Piscinas Decifer" width="800" height="1000">
+                <img loading="lazy" decoding="async" src="images/card-piscinas.jpg" alt="Piscinas Decifer" width="800" height="1000" style="object-position: center 45%;">
               </div>
               <div class="card-slider__slide">
                 <img loading="lazy" decoding="async" src="images/kids-pool.jpg" alt="Piscina infantil" width="800" height="1000">
@@ -142,10 +149,10 @@
             <div class="card-slider__dots" data-slider-dots></div>
           </div>
           <div class="card-body">
-            <p class="card-meta">Água</p>
-            <h3>Piscinas & Natação</h3>
-            <p>Piscinas olímpicas e de lazer, área infantil e aulas de natação. Ambiente tropical com espaços de descanso.</p>
-            <a href="desporto.html" class="btn btn-sm">Saber mais</a>
+            <p class="card-meta" data-i18n="Água">Água</p>
+            <h3 data-i18n="Piscinas & Natação">Piscinas & Natação</h3>
+            <p data-i18n="Piscinas olímpicas e de lazer, área infantil e aulas de natação. Ambiente tropical com espaços de descanso.">Piscinas olímpicas e de lazer, área infantil e aulas de natação. Ambiente tropical com espaços de descanso.</p>
+            <a href="desporto.html" class="btn btn-sm" data-i18n="Saber mais">Saber mais</a>
           </div>
         </article>
 
@@ -162,10 +169,10 @@
             <div class="card-slider__dots" data-slider-dots></div>
           </div>
           <div class="card-body">
-            <p class="card-meta">Hospedagem</p>
-            <h3>Alojamento Premium</h3>
-            <p>32 suítes com pequeno-almoço, estacionamento e internet. Suite Casal e Quarto Duplo.</p>
-            <a href="alojamento.html" class="btn btn-sm">Ver quartos</a>
+            <p class="card-meta" data-i18n="Hospedagem">Hospedagem</p>
+            <h3 data-i18n="Alojamento Premium">Alojamento Premium</h3>
+            <p data-i18n="32 suítes com pequeno-almoço, estacionamento e internet. Suite Casal e Quarto Duplo.">32 suítes com pequeno-almoço, estacionamento e internet. Suite Casal e Quarto Duplo.</p>
+            <a href="alojamento.html" class="btn btn-sm" data-i18n="Ver quartos">Ver quartos</a>
           </div>
         </article>
       </div>
@@ -178,10 +185,10 @@
       <img loading="lazy" decoding="async" src="images/split-alojamento.jpg" alt="Suite Decifer" width="1600" height="1200">
     </div>
     <div class="split-content">
-      <p class="uppercase section-subtitle">Alojamento</p>
-      <h2>Descanse com o mesmo padrão de excelência</h2>
-      <p>32 suítes com pequeno-almoço incluído, estacionamento e internet. Check-in 14h · Check-out 12h. Acesso a todas as instalações.</p>
-      <a href="alojamento.html" class="btn">Explorar Alojamento</a>
+      <p class="uppercase section-subtitle" data-i18n="Alojamento">Alojamento</p>
+      <h2 data-i18n="Descanse com o mesmo padrão de excelência">Descanse com o mesmo padrão de excelência</h2>
+      <p data-i18n="32 suítes com pequeno-almoço incluído, estacionamento e internet. Check-in 14h · Check-out 12h. Acesso a todas as instalações.">32 suítes com pequeno-almoço incluído, estacionamento e internet. Check-in 14h · Check-out 12h. Acesso a todas as instalações.</p>
+      <a href="alojamento.html" class="btn" data-i18n="Explorar Alojamento">Explorar Alojamento</a>
     </div>
   </section>
 
@@ -191,10 +198,10 @@
       <img loading="lazy" decoding="async" src="images/split-eventos.jpg" alt="Eventos no Decifer" width="1600" height="1200">
     </div>
     <div class="split-content">
-      <p class="uppercase section-subtitle">Eventos</p>
-      <h2>Espaço ideal para competições e celebrações</h2>
-      <p>Organizamos torneios de padel e futebol, aulas abertas, eventos corporativos e celebrações privadas. Contacte-nos para criar o seu próximo momento.</p>
-      <a href="eventos.html" class="btn">Ver Eventos</a>
+      <p class="uppercase section-subtitle" data-i18n="Eventos">Eventos</p>
+      <h2 data-i18n="Espaço ideal para competições e celebrações">Espaço ideal para competições e celebrações</h2>
+      <p data-i18n="Organizamos torneios de padel e futebol, aulas abertas, eventos corporativos e celebrações privadas. Contacte-nos para criar o seu próximo momento.">Organizamos torneios de padel e futebol, aulas abertas, eventos corporativos e celebrações privadas. Contacte-nos para criar o seu próximo momento.</p>
+      <a href="eventos.html" class="btn" data-i18n="Ver Eventos">Ver Eventos</a>
     </div>
   </section>
 
@@ -202,18 +209,18 @@
   <section class="section section-agenda">
     <div class="container">
       <div class="text-center mb-4">
-        <p class="uppercase section-subtitle">Agenda</p>
-        <h2 class="section-title">Próximos Eventos</h2>
-        <p class="agenda-lead">Torneios, aulas abertas e celebrações no Decifer — assim que houver datas confirmadas, aparecem aqui.</p>
+        <p class="uppercase section-subtitle" data-i18n="Agenda">Agenda</p>
+        <h2 class="section-title" data-i18n="Próximos Eventos">Próximos Eventos</h2>
+        <p class="agenda-lead" data-i18n="Torneios, aulas abertas e celebrações no Decifer — assim que houver datas confirmadas, aparecem aqui.">Torneios, aulas abertas e celebrações no Decifer — assim que houver datas confirmadas, aparecem aqui.</p>
       </div>
 
       <div class="agenda-empty">
-        <p class="agenda-empty__label">Agenda</p>
-        <h3 class="agenda-empty__title">Nenhum evento agendado de momento</h3>
-        <p class="agenda-empty__text">Ainda não há próximos eventos publicados. Siga o Instagram para novidades ou contacte-nos para organizar o seu próprio evento no resort.</p>
+        <p class="agenda-empty__label" data-i18n="Agenda">Agenda</p>
+        <h3 class="agenda-empty__title" data-i18n="Nenhum evento agendado de momento">Nenhum evento agendado de momento</h3>
+        <p class="agenda-empty__text" data-i18n="Ainda não há próximos eventos publicados. Siga o Instagram para novidades ou contacte-nos para organizar o seu próprio evento no resort.">Ainda não há próximos eventos publicados. Siga o Instagram para novidades ou contacte-nos para organizar o seu próprio evento no resort.</p>
         <div class="agenda-empty__actions">
-          <a href="eventos.html" class="btn">Explorar eventos &amp; espaços</a>
-          <a href="eventos.html#proposta" class="btn btn-sm">Pedir proposta</a>
+          <a href="eventos.html" class="btn" data-i18n="Explorar eventos &amp; espaços">Explorar eventos &amp; espaços</a>
+          <a href="eventos.html#proposta" class="btn btn-sm" data-i18n="Pedir proposta">Pedir proposta</a>
         </div>
       </div>
     </div>
@@ -224,9 +231,9 @@
     <img class="cta-band__media" loading="lazy" decoding="async" src="images/cta-background.jpg" alt="" width="1920" height="800">
     <div class="cta-band-overlay"></div>
     <div class="container text-center" style="position: relative; z-index: 1;">
-      <h2 style="color: white; margin-bottom: 1rem;">Pronto para a sua próxima experiência?</h2>
-      <p style="color: rgba(255,255,255,0.8); margin: 0 auto 2rem; max-width: 36ch;">Contacte-nos via WhatsApp para reservas, informações ou pedidos personalizados.</p>
-      <a href="contacto.html" class="btn btn-accent">Contactar</a>
+      <h2 style="color: white; margin-bottom: 1rem;" data-i18n="Pronto para a sua próxima experiência?">Pronto para a sua próxima experiência?</h2>
+      <p style="color: rgba(255,255,255,0.8); margin: 0 auto 2rem; max-width: 36ch;" data-i18n="Contacte-nos via WhatsApp para reservas, informações ou pedidos personalizados.">Contacte-nos via WhatsApp para reservas, informações ou pedidos personalizados.</p>
+      <a href="contacto.html" class="btn btn-accent" data-i18n="Contactar">Contactar</a>
     </div>
   </section>
 
@@ -239,39 +246,40 @@
             <img loading="eager" decoding="async" src="images/logo.jpg" alt="Decifer Sport Resort" width="32" height="32">
             <span>Decifer Sport Resort</span>
           </div>
-          <p style="font-size: 0.9rem; max-width: 28ch;">Resort desportivo com padel, futebol, natação, 32 suítes e espaços para eventos.</p>
+          <p style="font-size: 0.9rem; max-width: 28ch;" data-i18n="Resort desportivo com padel, futebol, natação, 32 suítes e espaços para eventos.">Resort desportivo com padel, futebol, natação, 32 suítes e espaços para eventos.</p>
         </div>
         <div>
-          <h4>Navegação</h4>
-          <a href="desporto.html">Desporto</a>
-          <a href="aluguer.html">Aluguer</a>
-          <a href="alojamento.html">Alojamento</a>
-          <a href="eventos.html">Eventos</a>
-          <a href="espacos.html">Espaços</a>
-          <a href="inscricao.html">Inscrição</a>
+          <h4 data-i18n="Navegação">Navegação</h4>
+          <a href="desporto.html" data-i18n="Desporto">Desporto</a>
+          <a href="aluguer.html" data-i18n="Aluguer">Aluguer</a>
+          <a href="alojamento.html" data-i18n="Alojamento">Alojamento</a>
+          <a href="eventos.html" data-i18n="Eventos">Eventos</a>
+          <a href="espacos.html" data-i18n="Espaços">Espaços</a>
+          <a href="inscricao.html" data-i18n="Inscrição">Inscrição</a>
         </div>
         <div>
-          <h4>Contacto</h4>
+          <h4 data-i18n="Contacto">Contacto</h4>
           <a href="tel:+244936724676">+244 936 724 676</a>
           <a href="mailto:reservas@decifersportresort.co.ao">reservas@decifersportresort.co.ao</a>
-          <a href="https://wa.me/244936724676" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://www.instagram.com/decifersportresort/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.facebook.com/decifersportresortcoque" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://wa.me/244936724676" target="_blank" rel="noopener" data-i18n="WhatsApp">WhatsApp</a>
+          <a href="https://www.instagram.com/decifersportresort/" target="_blank" rel="noopener" data-i18n="Instagram">Instagram</a>
+          <a href="https://www.facebook.com/decifersportresortcoque" target="_blank" rel="noopener" data-i18n="Facebook">Facebook</a>
         </div>
         <div>
-          <h4>Morada</h4>
+          <h4 data-i18n="Morada">Morada</h4>
           <p style="font-size: 0.9rem;">Rua do Centro de Distribuição da EPAL<br>Benfica II, Lar do Patriota</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Decifer Sport Resort. Todos os direitos reservados.</span>
-        <span>Benfica II, Lar do Patriota</span>
+        <span data-i18n="© 2026 Decifer Sport Resort. Todos os direitos reservados.">© 2026 Decifer Sport Resort. Todos os direitos reservados.</span>
+        <span data-i18n="Benfica II, Lar do Patriota">Benfica II, Lar do Patriota</span>
       </div>
     </div>
   </footer>
 
   <!-- Sticky CTA Mobile -->
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
