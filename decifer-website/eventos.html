@@ -232,50 +232,71 @@
         <h2 class="section-title" data-i18n="Pedir proposta de evento">Pedir proposta de evento</h2>
         <p style="margin: 0 auto;" data-i18n="Casamentos, aniversários, corporativos e mais. Resposta via WhatsApp.">Casamentos, aniversários, corporativos e mais. Resposta via WhatsApp.</p>
       </div>
-      <form class="form-whatsapp" data-form-type="Proposta de Evento">
-        <div class="form-group">
-          <label for="tipo_evento" data-i18n="Tipo de evento">Tipo de evento</label>
-          <select id="tipo_evento" name="tipo_evento" data-label="Tipo de evento" required>
-            <option value="" data-i18n="Seleccione">Seleccione</option>
-            <option value="Casamento" data-i18n="Casamento">Casamento</option>
-            <option value="Noivado (Pedido)" data-i18n="Noivado (Pedido)">Noivado (Pedido)</option>
-            <option value="Aniversário" data-i18n="Aniversário">Aniversário</option>
-            <option value="Batizado" data-i18n="Batizado">Batizado</option>
-            <option value="Corporativo" data-i18n="Corporativo">Corporativo</option>
-            <option value="Team Building" data-i18n="Team Building">Team Building</option>
-            <option value="Outro" data-i18n="Outro">Outro</option>
-          </select>
+            <form class="form-whatsapp" data-form-type="Proposta de Evento">
+        <div class="form-context">
+          <strong data-i18n="WhatsApp">WhatsApp</strong>
+          <span data-i18n="Casamentos, aniversários, corporativos e mais. Resposta via WhatsApp.">Casamentos, aniversários, corporativos e mais. Resposta via WhatsApp.</span>
         </div>
-        <div class="form-group">
-          <label for="espaco" data-i18n="Espaço preferido">Espaço preferido</label>
-          <select id="espaco" name="espaco" data-label="Espaço">
-            <option value="" data-i18n="A indicar">A indicar</option>
-            <option value="Toldos (máx. 40)" data-i18n="Toldos (máx. 40)">Toldos (máx. 40)</option>
-            <option value="Esplanada (máx. 300)" data-i18n="Esplanada (máx. 300)">Esplanada (máx. 300)</option>
-            <option value="Sala de Conferências (máx. 70)" data-i18n="Sala de Conferências (máx. 70)">Sala de Conferências (máx. 70)</option>
-          </select>
+
+        <div class="form-section">
+          <p class="form-section__title"><span class="form-section__num">01</span> <span data-i18n="Evento">Evento</span></p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="tipo_evento" data-i18n="Tipo de evento">Tipo de evento</label>
+              <select id="tipo_evento" name="tipo_evento" data-label="Tipo de evento" required>
+                <option value="" data-i18n="Seleccione">Seleccione</option>
+                <option value="Casamento" data-i18n="Casamento">Casamento</option>
+                <option value="Noivado (Pedido)" data-i18n="Noivado (Pedido)">Noivado (Pedido)</option>
+                <option value="Aniversário" data-i18n="Aniversário">Aniversário</option>
+                <option value="Batizado" data-i18n="Batizado">Batizado</option>
+                <option value="Corporativo" data-i18n="Corporativo">Corporativo</option>
+                <option value="Team Building" data-i18n="Team Building">Team Building</option>
+                <option value="Outro" data-i18n="Outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="espaco" data-i18n="Espaço preferido">Espaço preferido</label>
+              <select id="espaco" name="espaco" data-label="Espaço">
+                <option value="" data-i18n="A indicar">A indicar</option>
+                <option value="Toldos (máx. 40)" data-i18n="Toldos (máx. 40)">Toldos (máx. 40)</option>
+                <option value="Esplanada (máx. 300)" data-i18n="Esplanada (máx. 300)">Esplanada (máx. 300)</option>
+                <option value="Sala de Conferências (máx. 70)" data-i18n="Sala de Conferências (máx. 70)">Sala de Conferências (máx. 70)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="data_evento" data-i18n="Data pretendida">Data pretendida</label>
+              <input type="date" id="data_evento" name="data_evento" data-label="Data" required>
+            </div>
+            <div class="form-group">
+              <label for="convidados" data-i18n="N.º estimado de convidados">N.º estimado de convidados</label>
+              <input type="number" id="convidados" name="convidados" data-label="Convidados" min="1" required placeholder="Ex: 80" data-i18n-placeholder="Ex: 80">
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="data_evento" data-i18n="Data pretendida">Data pretendida</label>
-          <input type="date" id="data_evento" name="data_evento" data-label="Data" required>
+
+        <div class="form-section">
+          <p class="form-section__title"><span class="form-section__num">02</span> <span data-i18n="Contacto">Contacto</span></p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome" data-i18n="Nome">Nome</label>
+              <input type="text" id="nome" name="nome" data-label="Nome" required placeholder="O seu nome" data-i18n-placeholder="O seu nome">
+            </div>
+            <div class="form-group">
+              <label for="telefone" data-i18n="Telefone / WhatsApp">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" data-label="Telefone" required placeholder="+244..." data-i18n-placeholder="+244...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="notas"><span data-i18n="Detalhes">Detalhes</span> <span class="optional" data-i18n="Opcional">Opcional</span></label>
+            <textarea id="notas" name="notas" data-label="Detalhes" placeholder="Descreva o que precisa (opcional)" data-i18n-placeholder="Descreva o que precisa (opcional)"></textarea>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="convidados" data-i18n="N.º estimado de convidados">N.º estimado de convidados</label>
-          <input type="number" id="convidados" name="convidados" data-label="Convidados" min="1" required placeholder="Ex: 80 data-i18n-placeholder="Ex: 80">>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-accent" data-i18n="Enviar via WhatsApp">Enviar via WhatsApp</button>
         </div>
-        <div class="form-group">
-          <label for="nome" data-i18n="Nome">Nome</label>
-          <input type="text" id="nome" name="nome" data-label="Nome" required placeholder="O seu nome data-i18n-placeholder="O seu nome">>
-        </div>
-        <div class="form-group">
-          <label for="telefone" data-i18n="Telefone / WhatsApp">Telefone / WhatsApp</label>
-          <input type="tel" id="telefone" name="telefone" data-label="Telefone" required placeholder="+244... data-i18n-placeholder="+244...">>
-        </div>
-        <div class="form-group">
-          <label for="notas" data-i18n="Detalhes">Detalhes</label>
-          <textarea id="notas" name="notas" data-label="Detalhes" placeholder="Descreva o que precisa (opcional) data-i18n-placeholder="Descreva o que precisa (opcional)">></textarea>
-        </div>
-        <button type="submit" class="btn btn-accent" data-i18n="Enviar via WhatsApp">Enviar via WhatsApp</button>
       </form>
     </div>
   </section>

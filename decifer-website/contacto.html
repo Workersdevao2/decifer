@@ -108,33 +108,45 @@
 
         <div class="contact-form-wrap">
           <h3 data-i18n="Enviar mensagem">Enviar mensagem</h3>
-          <form class="form-whatsapp" data-form-type="Contacto geral">
-            <div class="form-group">
-              <label for="name" data-i18n="Nome">Nome</label>
-              <input type="text" id="name" name="name" data-label="Nome" required placeholder="O seu nome data-i18n-placeholder="O seu nome">>
+                    <form class="form-whatsapp" data-form-type="Contacto geral">
+            <div class="form-context">
+              <strong data-i18n="WhatsApp">WhatsApp</strong>
+              <span data-i18n="Preferimos o WhatsApp para respostas mais rápidas.">Preferimos o WhatsApp para respostas mais rápidas.</span>
             </div>
-            <div class="form-group">
-              <label for="phone" data-i18n="Telefone / WhatsApp">Telefone / WhatsApp</label>
-              <input type="tel" id="phone" name="phone" data-label="Telefone" required placeholder="+244... data-i18n-placeholder="+244...">>
+
+            <div class="form-section">
+              <p class="form-section__title"><span class="form-section__num">01</span> <span data-i18n="Contacto">Contacto</span></p>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" data-i18n="Nome">Nome</label>
+                  <input type="text" id="name" name="name" data-label="Nome" required placeholder="O seu nome" data-i18n-placeholder="O seu nome">
+                </div>
+                <div class="form-group">
+                  <label for="phone" data-i18n="Telefone / WhatsApp">Telefone / WhatsApp</label>
+                  <input type="tel" id="phone" name="phone" data-label="Telefone" required placeholder="+244..." data-i18n-placeholder="+244...">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject" data-i18n="Assunto">Assunto</label>
+                <select id="subject" name="subject" data-label="Assunto">
+                  <option value="reserva" data-i18n="Reserva de alojamento">Reserva de alojamento</option>
+                  <option value="padel" data-i18n="Reserva de court de Padel">Reserva de court de Padel</option>
+                  <option value="futebol" data-i18n="Campo de Futebol / Escolinha">Campo de Futebol / Escolinha</option>
+                  <option value="natacao" data-i18n="Aulas de Natação">Aulas de Natação</option>
+                  <option value="evento" data-i18n="Organização de evento">Organização de evento</option>
+                  <option value="outro" data-i18n="Outro assunto">Outro assunto</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message" data-i18n="Mensagem">Mensagem</label>
+                <textarea id="message" name="message" data-label="Mensagem" required placeholder="Descreva o seu pedido..." data-i18n-placeholder="Descreva o seu pedido..."></textarea>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="subject" data-i18n="Assunto">Assunto</label>
-              <select id="subject" name="subject" data-label="Assunto">
-                <option value="reserva" data-i18n="Reserva de alojamento">Reserva de alojamento</option>
-                <option value="padel" data-i18n="Reserva de court de Padel">Reserva de court de Padel</option>
-                <option value="futebol" data-i18n="Campo de Futebol / Escolinha">Campo de Futebol / Escolinha</option>
-                <option value="natacao" data-i18n="Aulas de Natação">Aulas de Natação</option>
-                <option value="evento" data-i18n="Organização de evento">Organização de evento</option>
-                <option value="outro" data-i18n="Outro assunto">Outro assunto</option>
-              </select>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-accent" data-i18n="Enviar via WhatsApp">Enviar via WhatsApp</button>
             </div>
-            <div class="form-group">
-              <label for="message" data-i18n="Mensagem">Mensagem</label>
-              <textarea id="message" name="message" data-label="Mensagem" required placeholder="Descreva o seu pedido... data-i18n-placeholder="Descreva o seu pedido...">></textarea>
-            </div>
-            <button type="submit" class="btn" data-i18n="Enviar via WhatsApp">Enviar via WhatsApp</button>
           </form>
-          <p class="form-note" data-i18n="Preferimos o WhatsApp para respostas mais rápidas.">Preferimos o WhatsApp para respostas mais rápidas.</p>
         </div>
       </div>
     </div>

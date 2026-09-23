@@ -72,54 +72,70 @@
 
   <section class="section">
     <div class="container" style="max-width: 640px;">
-      <form class="form-whatsapp" data-form-type="Inscrição — Aulas / Escolinhas">
-        <div class="form-group">
-          <label for="modalidade" data-i18n="Modalidade">Modalidade</label>
-          <select id="modalidade" name="modalidade" data-label="Modalidade" required>
-            <option value="" data-i18n="Seleccione">Seleccione</option>
-            <option value="Futebol (Escolinha)" data-i18n="Futebol (Escolinha)">Futebol (Escolinha)</option>
-            <option value="Natação" data-i18n="Natação">Natação</option>
-            <option value="Padel (Aulas)" data-i18n="Padel (Aulas)">Padel (Aulas)</option>
-            <option value="Jiu-Jitsu" data-i18n="Jiu-Jitsu">Jiu-Jitsu</option>
-            <option value="Sócio Natação (Treino livre)" data-i18n="Sócio Natação (Treino livre)">Sócio Natação (Treino livre)</option>
-          </select>
+            <form class="form-whatsapp" data-form-type="Inscrição — Aulas / Escolinhas">
+        <div class="form-context">
+          <strong data-i18n="WhatsApp">WhatsApp</strong>
+          <span data-i18n="Ao enviar, abre-se o WhatsApp com a mensagem pronta. Documentação (BI, fotos, avaliação médica) será indicada na resposta.">Ao enviar, abre-se o WhatsApp com a mensagem pronta. Documentação (BI, fotos, avaliação médica) será indicada na resposta.</span>
         </div>
 
-        <div class="form-group">
-          <label for="aluno" data-i18n="Nome do aluno">Nome do aluno</label>
-          <input type="text" id="aluno" name="aluno" data-label="Nome do aluno" required placeholder="Nome completo data-i18n-placeholder="Nome completo">>
+        <div class="form-section">
+          <p class="form-section__title"><span class="form-section__num">01</span> <span data-i18n="Modalidade">Modalidade</span></p>
+          <div class="form-group">
+            <label for="modalidade" data-i18n="Modalidade">Modalidade</label>
+            <select id="modalidade" name="modalidade" data-label="Modalidade" required>
+              <option value="" data-i18n="Seleccione">Seleccione</option>
+              <option value="Futebol (Escolinha)" data-i18n="Futebol (Escolinha)">Futebol (Escolinha)</option>
+              <option value="Natação" data-i18n="Natação">Natação</option>
+              <option value="Padel (Aulas)" data-i18n="Padel (Aulas)">Padel (Aulas)</option>
+              <option value="Jiu-Jitsu" data-i18n="Jiu-Jitsu">Jiu-Jitsu</option>
+              <option value="Sócio Natação (Treino livre)" data-i18n="Sócio Natação (Treino livre)">Sócio Natação (Treino livre)</option>
+            </select>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="idade" data-i18n="Idade do aluno">Idade do aluno</label>
-          <input type="number" id="idade" name="idade" data-label="Idade" required min="4" max="99" placeholder="Ex: 12 data-i18n-placeholder="Ex: 12">>
+        <div class="form-section">
+          <p class="form-section__title"><span class="form-section__num">02</span> <span data-i18n="Aluno">Aluno</span></p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="aluno" data-i18n="Nome do aluno">Nome do aluno</label>
+              <input type="text" id="aluno" name="aluno" data-label="Nome do aluno" required placeholder="Nome completo" data-i18n-placeholder="Nome completo">
+            </div>
+            <div class="form-group">
+              <label for="idade" data-i18n="Idade do aluno">Idade do aluno</label>
+              <input type="number" id="idade" name="idade" data-label="Idade" required min="4" max="99" placeholder="Ex: 12" data-i18n-placeholder="Ex: 12">
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="encarregado" data-i18n="Nome do encarregado">Nome do encarregado</label>
-          <input type="text" id="encarregado" name="encarregado" data-label="Encarregado" placeholder="Se aplicável data-i18n-placeholder="Se aplicável">>
+        <div class="form-section">
+          <p class="form-section__title"><span class="form-section__num">03</span> <span data-i18n="Contacto">Contacto</span></p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="encarregado"><span data-i18n="Nome do encarregado">Nome do encarregado</span> <span class="optional" data-i18n="Opcional">Opcional</span></label>
+              <input type="text" id="encarregado" name="encarregado" data-label="Encarregado" placeholder="Se aplicável" data-i18n-placeholder="Se aplicável">
+            </div>
+            <div class="form-group">
+              <label for="telefone" data-i18n="Telefone / WhatsApp">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" data-label="Telefone" required placeholder="+244..." data-i18n-placeholder="+244...">
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="telefone" data-i18n="Telefone / WhatsApp">Telefone / WhatsApp</label>
-          <input type="tel" id="telefone" name="telefone" data-label="Telefone" required placeholder="+244... data-i18n-placeholder="+244...">>
+        <div class="form-section">
+          <p class="form-section__title"><span class="form-section__num">04</span> <span data-i18n="Preferências">Preferências</span></p>
+          <div class="form-group">
+            <label for="horario"><span data-i18n="Preferência de horário">Preferência de horário</span> <span class="optional" data-i18n="Opcional">Opcional</span></label>
+            <input type="text" id="horario" name="horario" data-label="Horário preferido" placeholder="Ex: 3ª e 5ª, 17h–18h" data-i18n-placeholder="Ex: 3ª e 5ª, 17h–18h">
+          </div>
+          <div class="form-group">
+            <label for="notas"><span data-i18n="Observações">Observações</span> <span class="optional" data-i18n="Opcional">Opcional</span></label>
+            <textarea id="notas" name="notas" data-label="Observações" placeholder="Informação adicional (opcional)" data-i18n-placeholder="Informação adicional (opcional)"></textarea>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="horario" data-i18n="Preferência de horário">Preferência de horário</label>
-          <input type="text" id="horario" name="horario" data-label="Horário preferido" placeholder="Ex: 3ª e 5ª, 17h–18h data-i18n-placeholder="Ex: 3ª e 5ª, 17h–18h">>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-accent" data-i18n="Enviar via WhatsApp">Enviar via WhatsApp</button>
         </div>
-
-        <div class="form-group">
-          <label for="notas" data-i18n="Observações">Observações</label>
-          <textarea id="notas" name="notas" data-label="Observações" placeholder="Informação adicional (opcional) data-i18n-placeholder="Informação adicional (opcional)">></textarea>
-        </div>
-
-        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1.25rem;" data-i18n="Ao enviar, abre-se o WhatsApp com a mensagem pronta. Documentação (BI, fotos, avaliação médica) será indicada na resposta.">
-          Ao enviar, abre-se o WhatsApp com a mensagem pronta. Documentação (BI, fotos, avaliação médica) será indicada na resposta.
-        </p>
-
-        <button type="submit" class="btn btn-accent" data-i18n="Enviar via WhatsApp">Enviar via WhatsApp</button>
       </form>
 
 

@@ -187,42 +187,60 @@
         <h2 class="section-title" data-i18n="Pedido de aluguer">Pedido de aluguer</h2>
         <p style="margin: 0 auto;" data-i18n="Indique o espaço, a data e a hora. A mensagem é enviada para o WhatsApp do Decifer.">Indique o espaço, a data e a hora. A mensagem é enviada para o WhatsApp do Decifer.</p>
       </div>
-      <form class="form-whatsapp" data-form-type="Aluguer de Espaço Desportivo">
-        <div class="form-group">
-          <label for="tipo" data-i18n="Tipo de espaço">Tipo de espaço</label>
-          <select id="tipo" name="tipo" data-label="Tipo de espaço" required>
-            <option value="" data-i18n="Seleccione">Seleccione</option>
-            <option value="Campo completo com balneário" data-i18n="Campo completo com balneário">Campo completo com balneário</option>
-            <option value="Campo completo sem balneário" data-i18n="Campo completo sem balneário">Campo completo sem balneário</option>
-            <option value="Meio-campo com balneário" data-i18n="Meio-campo com balneário">Meio-campo com balneário</option>
-            <option value="Meio-campo sem balneário" data-i18n="Meio-campo sem balneário">Meio-campo sem balneário</option>
-            <option value="Padel (1 hora)" data-i18n="Padel (1 hora)">Padel (1 hora)</option>
-            <option value="Padel (1h30)" data-i18n="Padel (1h30)">Padel (1h30)</option>
-            <option value="Piscina (acesso diário)" data-i18n="Piscina (acesso diário)">Piscina (acesso diário)</option>
-          </select>
+            <form class="form-whatsapp" data-form-type="Aluguer de Espaço Desportivo">
+        <div class="form-context">
+          <strong data-i18n="WhatsApp">WhatsApp</strong>
+          <span data-i18n="Pedidos de Padel são encaminhados para 929 797 204. Restantes para 936 724 676.">Pedidos de Padel são encaminhados para 929 797 204. Restantes para 936 724 676.</span>
         </div>
-        <div class="form-group">
-          <label for="data" data-i18n="Data">Data</label>
-          <input type="date" id="data" name="data" data-label="Data" required>
+
+        <div class="form-section">
+          <p class="form-section__title"><span class="form-section__num">01</span> <span data-i18n="Espaço">Espaço</span></p>
+          <div class="form-group">
+            <label for="tipo" data-i18n="Tipo de espaço">Tipo de espaço</label>
+            <select id="tipo" name="tipo" data-label="Tipo de espaço" required>
+              <option value="" data-i18n="Seleccione">Seleccione</option>
+              <option value="Campo completo com balneário" data-i18n="Campo completo com balneário">Campo completo com balneário</option>
+              <option value="Campo completo sem balneário" data-i18n="Campo completo sem balneário">Campo completo sem balneário</option>
+              <option value="Meio-campo com balneário" data-i18n="Meio-campo com balneário">Meio-campo com balneário</option>
+              <option value="Meio-campo sem balneário" data-i18n="Meio-campo sem balneário">Meio-campo sem balneário</option>
+              <option value="Padel (1 hora)" data-i18n="Padel (1 hora)">Padel (1 hora)</option>
+              <option value="Padel (1h30)" data-i18n="Padel (1h30)">Padel (1h30)</option>
+              <option value="Piscina (acesso diário)" data-i18n="Piscina (acesso diário)">Piscina (acesso diário)</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="data" data-i18n="Data">Data</label>
+              <input type="date" id="data" name="data" data-label="Data" required>
+            </div>
+            <div class="form-group">
+              <label for="hora" data-i18n="Hora / período">Hora / período</label>
+              <input type="text" id="hora" name="hora" data-label="Hora" required placeholder="Ex: 18:00 ou 08:00–17:00" data-i18n-placeholder="Ex: 18:00 ou 08:00–17:00">
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="hora" data-i18n="Hora / período">Hora / período</label>
-          <input type="text" id="hora" name="hora" data-label="Hora" required placeholder="Ex: 18:00 ou 08:00–17:00 data-i18n-placeholder="Ex: 18:00 ou 08:00–17:00">>
+
+        <div class="form-section">
+          <p class="form-section__title"><span class="form-section__num">02</span> <span data-i18n="Contacto">Contacto</span></p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome" data-i18n="Nome">Nome</label>
+              <input type="text" id="nome" name="nome" data-label="Nome" required placeholder="O seu nome" data-i18n-placeholder="O seu nome">
+            </div>
+            <div class="form-group">
+              <label for="telefone" data-i18n="Telefone / WhatsApp">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" data-label="Telefone" required placeholder="+244..." data-i18n-placeholder="+244...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="notas"><span data-i18n="Observações">Observações</span> <span class="optional" data-i18n="Opcional">Opcional</span></label>
+            <textarea id="notas" name="notas" data-label="Observações" placeholder="Opcional" data-i18n-placeholder="Opcional"></textarea>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="nome" data-i18n="Nome">Nome</label>
-          <input type="text" id="nome" name="nome" data-label="Nome" required placeholder="O seu nome data-i18n-placeholder="O seu nome">>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-accent" data-i18n="Enviar via WhatsApp">Enviar via WhatsApp</button>
         </div>
-        <div class="form-group">
-          <label for="telefone" data-i18n="Telefone / WhatsApp">Telefone / WhatsApp</label>
-          <input type="tel" id="telefone" name="telefone" data-label="Telefone" required placeholder="+244... data-i18n-placeholder="+244...">>
-        </div>
-        <div class="form-group">
-          <label for="notas" data-i18n="Observações">Observações</label>
-          <textarea id="notas" name="notas" data-label="Observações" placeholder="Opcional data-i18n-placeholder="Opcional">></textarea>
-        </div>
-        <button type="submit" class="btn btn-accent" data-i18n="Enviar via WhatsApp">Enviar via WhatsApp</button>
-        <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 1rem;" data-i18n="Pedidos de Padel são encaminhados para 929 797 204. Restantes para 936 724 676.">Pedidos de Padel são encaminhados para 929 797 204. Restantes para 936 724 676.</p>
       </form>
     </div>
   </section>

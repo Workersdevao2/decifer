@@ -271,47 +271,68 @@
         <h2 class="section-title" data-i18n="Pedido de alojamento">Pedido de alojamento</h2>
         <p style="margin: 0 auto;" data-i18n="Indique as datas e o tipo de quarto. Enviamos a disponibilidade via WhatsApp.">Indique as datas e o tipo de quarto. Enviamos a disponibilidade via WhatsApp.</p>
       </div>
-      <form class="form-whatsapp" data-form-type="Reserva de Alojamento">
-        <div class="form-group">
-          <label for="tipo_quarto" data-i18n="Tipo de quarto">Tipo de quarto</label>
-          <select id="tipo_quarto" name="tipo_quarto" data-label="Tipo de quarto" required>
-            <option value="" data-i18n="Seleccione">Seleccione</option>
-            <option value="Suite Casal (80.000 Kz)" data-i18n="Suite Casal (80.000 Kz)">Suite Casal (80.000 Kz)</option>
-            <option value="Quarto Duplo (90.000 Kz)" data-i18n="Quarto Duplo (90.000 Kz)">Quarto Duplo (90.000 Kz)</option>
-          </select>
+            <form class="form-whatsapp" data-form-type="Reserva de Alojamento">
+        <div class="form-context">
+          <strong data-i18n="WhatsApp">WhatsApp</strong>
+          <span data-i18n="Indique as datas e o tipo de quarto. Enviamos a disponibilidade via WhatsApp.">Indique as datas e o tipo de quarto. Enviamos a disponibilidade via WhatsApp.</span>
         </div>
-        <div class="form-group">
-          <label for="checkin" data-i18n="Check-in">Check-in</label>
-          <input type="date" id="checkin" name="checkin" data-label="Check-in" required>
+
+        <div class="form-section">
+          <p class="form-section__title"><span class="form-section__num">01</span> <span data-i18n="Estadia">Estadia</span></p>
+          <div class="form-group">
+            <label for="tipo_quarto" data-i18n="Tipo de quarto">Tipo de quarto</label>
+            <select id="tipo_quarto" name="tipo_quarto" data-label="Tipo de quarto" required>
+              <option value="" data-i18n="Seleccione">Seleccione</option>
+              <option value="Suite Casal (80.000 Kz)" data-i18n="Suite Casal (80.000 Kz)">Suite Casal (80.000 Kz)</option>
+              <option value="Quarto Duplo (90.000 Kz)" data-i18n="Quarto Duplo (90.000 Kz)">Quarto Duplo (90.000 Kz)</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="checkin" data-i18n="Check-in">Check-in</label>
+              <input type="date" id="checkin" name="checkin" data-label="Check-in" required>
+            </div>
+            <div class="form-group">
+              <label for="checkout" data-i18n="Check-out">Check-out</label>
+              <input type="date" id="checkout" name="checkout" data-label="Check-out" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="hospedes" data-i18n="N.º de hóspedes">N.º de hóspedes</label>
+              <input type="number" id="hospedes" name="hospedes" data-label="Hóspedes" min="1" max="10" value="2" required>
+            </div>
+            <div class="form-group">
+              <label for="cama_extra" data-i18n="Cama extra">Cama extra</label>
+              <select id="cama_extra" name="cama_extra" data-label="Cama extra">
+                <option value="Não" data-i18n="Não">Não</option>
+                <option value="Sim (40.000 Kz)" data-i18n="Sim (40.000 Kz)">Sim (40.000 Kz)</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="checkout" data-i18n="Check-out">Check-out</label>
-          <input type="date" id="checkout" name="checkout" data-label="Check-out" required>
+
+        <div class="form-section">
+          <p class="form-section__title"><span class="form-section__num">02</span> <span data-i18n="Contacto">Contacto</span></p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome" data-i18n="Nome">Nome</label>
+              <input type="text" id="nome" name="nome" data-label="Nome" required placeholder="O seu nome" data-i18n-placeholder="O seu nome">
+            </div>
+            <div class="form-group">
+              <label for="telefone" data-i18n="Telefone / WhatsApp">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" data-label="Telefone" required placeholder="+244..." data-i18n-placeholder="+244...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="notas"><span data-i18n="Observações">Observações</span> <span class="optional" data-i18n="Opcional">Opcional</span></label>
+            <textarea id="notas" name="notas" data-label="Observações" placeholder="Pedido especial (opcional)" data-i18n-placeholder="Pedido especial (opcional)"></textarea>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="hospedes" data-i18n="N.º de hóspedes">N.º de hóspedes</label>
-          <input type="number" id="hospedes" name="hospedes" data-label="Hóspedes" min="1" max="10" value="2" required>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-accent" data-i18n="Enviar via WhatsApp">Enviar via WhatsApp</button>
         </div>
-        <div class="form-group">
-          <label for="cama_extra" data-i18n="Cama extra">Cama extra</label>
-          <select id="cama_extra" name="cama_extra" data-label="Cama extra">
-            <option value="Não" data-i18n="Não">Não</option>
-            <option value="Sim (40.000 Kz)" data-i18n="Sim (40.000 Kz)">Sim (40.000 Kz)</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="nome" data-i18n="Nome">Nome</label>
-          <input type="text" id="nome" name="nome" data-label="Nome" required placeholder="O seu nome data-i18n-placeholder="O seu nome">>
-        </div>
-        <div class="form-group">
-          <label for="telefone" data-i18n="Telefone / WhatsApp">Telefone / WhatsApp</label>
-          <input type="tel" id="telefone" name="telefone" data-label="Telefone" required placeholder="+244... data-i18n-placeholder="+244...">>
-        </div>
-        <div class="form-group">
-          <label for="notas" data-i18n="Observações">Observações</label>
-          <textarea id="notas" name="notas" data-label="Observações" placeholder="Pedido especial (opcional) data-i18n-placeholder="Pedido especial (opcional)">></textarea>
-        </div>
-        <button type="submit" class="btn btn-accent" data-i18n="Enviar via WhatsApp">Enviar via WhatsApp</button>
       </form>
     </div>
   </section>
