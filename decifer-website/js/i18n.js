@@ -403,6 +403,13 @@
   "Escolas": "Schools",
   "en": "pt",
   "true": "false"
+,
+  "Aluno": "Student",
+  "Preferências": "Preferences",
+  "Espaço": "Space",
+  "Estadia": "Stay",
+  "Evento": "Event",
+  "Opcional": "Optional"
 };
 
   function currentLang() {
