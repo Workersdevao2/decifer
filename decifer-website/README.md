@@ -75,7 +75,8 @@ Primary CTAs link to the form first. WhatsApp opens only after submit.
 - Logo and favicons are local.
 - No sticky bottom CTA bar.
 - Home hero: dual-image slideshow with zoom.
-- Mobile: thin-line hamburger (menu opens from the right).
+- Mobile: thin-line hamburger on the left; solid drawer slides in from the left.
+- Header: announcement bar + transparent-to-solid fixed header; text-only centered brand above desktop nav.
 - Lazy loading on below-the-fold images; `data-bg` + IntersectionObserver for some backgrounds.
 
 ## Style principles

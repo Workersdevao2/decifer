@@ -15,13 +15,28 @@
   <link rel="shortcut icon" href="images/logo.jpg">
 </head>
 <body>
+    <!-- Announcement bar -->
+  <div class="announce-bar">
+    <a href="alojamento.html#reservar" class="announce-bar__link">
+      <span data-i18n="Reservas abertas · Suite Casal a partir de ">Reservas abertas · Suite Casal a partir de </span><em>80.000 Kz</em>
+    </a>
+  </div>
+
+  <!-- Header -->
   <header class="header">
     <div class="header-inner">
-      <a href="index.html" class="logo">
-        <img loading="eager" decoding="async" src="images/logo.jpg" alt="Decifer Sport Resort" width="36" height="36">
-        <span>Decifer Sport Resort</span>
+      <button type="button" class="hamburger" aria-label="Menu" aria-expanded="false" data-i18n-aria="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="index.html" class="brand">
+        <span class="brand__name">Decifer</span>
+        <span class="brand__tagline">Sport Resort</span>
       </a>
-      <nav class="nav-desktop">
+
+      <nav class="nav-desktop" aria-label="Principal">
         <ul>
           <li><a href="index.html" data-i18n="Início">Início</a></li>
           <li><a href="desporto.html" data-i18n="Desporto">Desporto</a></li>
@@ -33,23 +48,27 @@
           <li><a href="contacto.html" data-i18n="Contacto">Contacto</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
         <button type="button" class="lang-toggle" data-lang-toggle aria-label="Language" title="PT / EN">
           <span data-lang-pt class="is-active">PT</span>
           <span class="lang-toggle__sep">/</span>
           <span data-lang-en>EN</span>
         </button>
-        <button class="hamburger" aria-label="Menu" data-i18n-aria="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
     </div>
   </header>
 
+  <!-- Mobile drawer (left) -->
   <div class="nav-overlay"></div>
-  <nav class="nav-mobile">
+  <nav class="nav-mobile" aria-label="Mobile">
+    <div class="nav-mobile__top">
+      <div class="nav-mobile__brand">
+        <span class="nav-mobile__brand-name">Decifer</span>
+        <span class="nav-mobile__brand-tag">Sport Resort</span>
+      </div>
+      <button type="button" class="nav-mobile__close" data-drawer-close aria-label="Fechar">&times;</button>
+    </div>
     <ul>
       <li><a href="index.html" data-i18n="Início">Início</a></li>
       <li><a href="desporto.html" data-i18n="Desporto">Desporto</a></li>
@@ -61,6 +80,7 @@
       <li><a href="contacto.html" data-i18n="Contacto">Contacto</a></li>
     </ul>
   </nav>
+
 
   <section class="page-hero page-hero--media" style="background-image: url('images/espacos-hero.jpg');">
     <div class="container">

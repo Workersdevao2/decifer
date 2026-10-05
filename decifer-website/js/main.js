@@ -2,29 +2,63 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header");
+  const announce = document.querySelector(".announce-bar");
   const hamburger = document.querySelector(".hamburger");
   const navMobile = document.querySelector(".nav-mobile");
   const navOverlay = document.querySelector(".nav-overlay");
+  const drawerClose = document.querySelector("[data-drawer-close]");
   const body = document.body;
 
-  // Header scroll effect
+  let lastScrollY = window.scrollY;
+  let announceHidden = false;
+
+  // Header scroll + announcement bar hide/show
   const onScroll = () => {
-    if (window.scrollY > 40) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
+    const y = window.scrollY;
+
+    if (header) {
+      if (y > 24) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
     }
+
+    if (announce) {
+      // Hide on scroll down past threshold; show near top or on scroll up near top
+      if (y > 80 && y > lastScrollY) {
+        if (!announceHidden) {
+          announce.classList.add("is-hidden");
+          header && header.classList.add("announce-hidden");
+          announceHidden = true;
+        }
+      } else if (y < 40 || (y < lastScrollY && y < 120)) {
+        if (announceHidden) {
+          announce.classList.remove("is-hidden");
+          header && header.classList.remove("announce-hidden");
+          announceHidden = false;
+        }
+      }
+    }
+
+    lastScrollY = y;
   };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  // Mobile menu toggle
+  // Mobile drawer toggle (left)
+  const setMenuOpen = (open) => {
+    if (!navMobile) return;
+    hamburger && hamburger.classList.toggle("active", open);
+    navMobile.classList.toggle("open", open);
+    navOverlay && navOverlay.classList.toggle("visible", open);
+    body.classList.toggle("menu-open", open);
+    if (hamburger) hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+
   const toggleMenu = () => {
-    const isOpen = navMobile.classList.contains("open");
-    hamburger.classList.toggle("active", !isOpen);
-    navMobile.classList.toggle("open", !isOpen);
-    navOverlay.classList.toggle("visible", !isOpen);
-    body.classList.toggle("menu-open", !isOpen);
+    const isOpen = navMobile && navMobile.classList.contains("open");
+    setMenuOpen(!isOpen);
   };
 
   if (hamburger) {
@@ -32,17 +66,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (navOverlay) {
-    navOverlay.addEventListener("click", toggleMenu);
+    navOverlay.addEventListener("click", () => setMenuOpen(false));
+  }
+
+  if (drawerClose) {
+    drawerClose.addEventListener("click", () => setMenuOpen(false));
   }
 
   // Close menu on link click
   const mobileLinks = document.querySelectorAll(".nav-mobile a");
   mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (navMobile.classList.contains("open")) {
-        toggleMenu();
-      }
-    });
+    link.addEventListener("click", () => setMenuOpen(false));
   });
 
   // WhatsApp form handler

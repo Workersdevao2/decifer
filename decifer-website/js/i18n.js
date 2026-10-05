@@ -13,6 +13,8 @@
   "Inscrição": "Enrolment",
   "Contacto": "Contact",
   "Menu": "Menu",
+  "Reservas abertas · Suite Casal a partir de ": "Bookings open · Double suite from ",
+  "Fechar": "Close",
   "Navegação": "Navigation",
   "Morada": "Address",
   "WhatsApp": "WhatsApp",
